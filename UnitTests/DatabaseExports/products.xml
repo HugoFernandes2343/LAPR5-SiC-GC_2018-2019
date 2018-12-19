@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<products>
+  <product>
+    <Id>1</Id>
+    <Name>Closet</Name>
+    <Description>Default description</Description>
+    <Price>50</Price>
+    <MaterialId>1</MaterialId>
+    <DimensionId>1</DimensionId>
+    <CategoryId>5</CategoryId>
+    <RestrictionId>1</RestrictionId>
+    <ParentId></ParentId>
+  </product>
+  <product>
+    <Id>2</Id>
+    <Name>Drawer</Name>
+    <Description>Closet Drawer</Description>
+    <Price>150</Price>
+    <MaterialId>2</MaterialId>
+    <DimensionId>1</DimensionId>
+    <CategoryId>4</CategoryId>
+    <RestrictionId>1</RestrictionId>
+    <ParentId>1</ParentId>
+  </product>
+  <product>
+    <Id>3</Id>
+    <Name>Wardrobe</Name>
+    <Description>Default description</Description>
+    <Price>20</Price>
+    <MaterialId>1</MaterialId>
+    <DimensionId>1</DimensionId>
+    <CategoryId>3</CategoryId>
+    <RestrictionId>1</RestrictionId>
+    <ParentId>1</ParentId>
+  </product>
+  <product>
+    <Id>4</Id>
+    <Name>Closet</Name>
+    <Description>Default description
+    </Description>
+    <Price>1000</Price>
+    <MaterialId>1</MaterialId>
+    <DimensionId>1</DimensionId>
+    <CategoryId>3</CategoryId>
+    <RestrictionId>1</RestrictionId>
+    <ParentId></ParentId>
+  </product>
+</products>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<orders>
+  <order>
+    <Id>1</Id>
+    <Date>04/10/2018</Date>
+    <UserId>1</UserId>
+  </order>
+</orders>

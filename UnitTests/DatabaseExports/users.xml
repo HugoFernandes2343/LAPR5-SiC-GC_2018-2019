@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<users>
+  <user>
+    <Id>1</Id>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Email>johndoe@email.com
+    </Email>
+    <Password>password1</Password>
+  </user>
+  <user>
+    <Id>2</Id>
+    <FirstName>Jorge</FirstName>
+    <LastName>Men</LastName>
+    <Email>jorgemen@email.com</Email>
+    <Password>password1</Password>
+  </user>
+</users>

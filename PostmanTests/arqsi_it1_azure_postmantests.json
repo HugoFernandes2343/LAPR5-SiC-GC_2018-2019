@@ -1,0 +1,2483 @@
+{
+	"info": {
+		"_postman_id": "8abf5718-29b8-4ab2-be9a-9b7b2c13bd5e",
+		"name": "arqsi_azure_it1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eaf8428a-21de-4d7f-b793-6a81b9f022d5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "027183c9-7da1-4b86-ac60-b542a8245e94",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/name=drawer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f39f2e-0235-4c69-a5f3-be70ecffbdc7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/name=drawer",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"name=drawer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1/components",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "991b2afc-4513-4600-be98-1bde68c37ffc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"1",
+						"restrictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/2/componentin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cc6d5928-9acf-4ca3-8cdf-a267ed0f1a38",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/2/componentin",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"2",
+						"componentin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "178f4077-ce53-40d3-8c72-2a1df9cdcc0e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"1",
+						"restrictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/7/restrictions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3fa76c3-b05c-4b96-8e1e-bf7cce924c3b",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/7/restrictions",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"7",
+						"restrictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/materialfinish/521",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/materialfinish/521",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"materialfinish",
+						"521"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/order/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/order/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/order/11321",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/order/11321",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"order",
+						"11321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/order/11321",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/order/11321",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"order",
+						"11321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/order/1/items",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/order/1/items",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"order",
+						"1",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/user/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/user/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/materialfinish/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/materialfinish/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"materialfinish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/material/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/material/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"material",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/user",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/user/John",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/user/John",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"user",
+						"John"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/user/asdasdas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/user/asdasdas",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"user",
+						"asdasdas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1412",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\" : \"12-12-2018\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\" : \"12-12-2018\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/2",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"cate\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 2\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/category/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/category/2",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"height\": 1,\n\t\"width\": 12\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"height\": 1,\n\t\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"height\": 19,\n\t\"width\": 100\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\",\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/505",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/505",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						"505"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/material/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"material\",\n\t\"description\": \"desc1\",\n\t\"finishId\":1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/material/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"material",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/material/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"material\",\n\t\"description\": \"desc1\",\n\t\"finishId\":1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/material/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"material",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"product\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/64",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/64",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/product/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "32740734-4211-49fb-bc41-725cb5ef5606",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/product/2",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/1312",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/1312",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						"1312"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/catalog/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"catalog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/restriction/1412",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbb432b1-cbb1-4759-ae25-fe641f94a919",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/restriction/1412",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"restriction",
+						"1412"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/order/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/order/1",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/finish/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/finish/3",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"finish",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/material/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/material/3",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"material",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://arqsi-web.azurewebsites.net/api/dimension/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ec48a7-3bc5-4567-bc11-cb97006f9c19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
+				},
+				"url": {
+					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/2",
+					"protocol": "https",
+					"host": [
+						"arqsi-web.azurewebsites.net"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"dimension",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

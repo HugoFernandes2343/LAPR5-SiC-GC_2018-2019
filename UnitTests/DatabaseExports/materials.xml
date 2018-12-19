@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<materials>
+  <material>
+    <Id>1</Id>
+    <Name>Light wood</Name>
+    <Description>Light brown wood</Description>
+    <FinishId>1</FinishId>
+  </material>
+  <material>
+    <Id>2</Id>
+    <Name>Dark wood</Name>
+    <Description>Dark brown wood</Description>
+    <FinishId>1</FinishId>
+  </material>
+  <material>
+    <Id>3</Id>
+    <Name>Iron</Name>
+    <Description>Grey iron</Description>
+    <FinishId>2</FinishId>
+  </material>
+</materials>

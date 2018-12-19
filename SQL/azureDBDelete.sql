@@ -1,0 +1,15 @@
+DROP TABLE dbo.measures;
+DROP TABLE dbo.catalogs;
+DROP TABLE dbo.categories;
+DROP TABLE dbo.dimensions;
+DROP TABLE dbo.materials;
+DROP TABLE dbo.finishes;
+DROP TABLE dbo.orders;
+DROP TABLE dbo.materialFinishes;
+DROP TABLE dbo.productMaterials;
+DROP TABLE dbo.ordersAndProducts;
+DROP TABLE dbo.products;
+DROP TABLE dbo.childMaterialRestrictions;
+DROP TABLE dbo.restrictions;
+DROP TABLE dbo.users;
+DROP TABLE dbo.__EFMIgrationsHistory;
