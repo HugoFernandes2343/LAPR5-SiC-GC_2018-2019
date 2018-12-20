@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product",
 			"event": [
 				{
 					"listen": "test",
@@ -29,10 +29,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -44,7 +44,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1",
 			"event": [
 				{
 					"listen": "test",
@@ -67,10 +67,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -83,7 +83,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/name=drawer",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/name=drawer",
 			"event": [
 				{
 					"listen": "test",
@@ -106,10 +106,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/name=drawer",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/name=drawer",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -122,7 +122,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1/components",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1/components",
 			"event": [
 				{
 					"listen": "test",
@@ -152,10 +152,10 @@
 					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -168,7 +168,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1/restrictions",
 			"event": [
 				{
 					"listen": "test",
@@ -191,10 +191,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/1/restrictions",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -208,7 +208,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/2/componentin",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/2/componentin",
 			"event": [
 				{
 					"listen": "test",
@@ -231,10 +231,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/2/componentin",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/2/componentin",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -248,7 +248,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1/restrictions",
 			"event": [
 				{
 					"listen": "test",
@@ -271,10 +271,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/1/restrictions",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/1/restrictions",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -288,7 +288,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/7/restrictions",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/7/restrictions",
 			"event": [
 				{
 					"listen": "test",
@@ -311,10 +311,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/7/restrictions",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/7/restrictions",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -328,7 +328,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/materialfinish/521",
+			"name": "https://lapr5-gc.azurewebsites.net/api/materialfinish/521",
 			"event": [
 				{
 					"listen": "test",
@@ -351,10 +351,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/materialfinish/521",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/materialfinish/521",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -367,7 +367,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category/1",
 			"event": [
 				{
 					"listen": "test",
@@ -390,10 +390,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -406,7 +406,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category/",
 			"event": [
 				{
 					"listen": "test",
@@ -429,10 +429,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -445,7 +445,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/order/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/order/",
 			"event": [
 				{
 					"listen": "test",
@@ -468,10 +468,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/order/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/order/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -484,7 +484,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/order/11321",
+			"name": "https://lapr5-gc.azurewebsites.net/api/order/11321",
 			"event": [
 				{
 					"listen": "test",
@@ -507,10 +507,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/order/11321",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/order/11321",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -523,7 +523,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/order/11321",
+			"name": "https://lapr5-gc.azurewebsites.net/api/order/11321",
 			"event": [
 				{
 					"listen": "test",
@@ -546,10 +546,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/order/11321",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/order/11321",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -562,7 +562,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/order/1/items",
+			"name": "https://lapr5-gc.azurewebsites.net/api/order/1/items",
 			"event": [
 				{
 					"listen": "test",
@@ -585,10 +585,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/order/1/items",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/order/1/items",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -602,7 +602,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 			"event": [
 				{
 					"listen": "test",
@@ -625,10 +625,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -641,7 +641,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category/",
 			"event": [
 				{
 					"listen": "test",
@@ -664,10 +664,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -680,7 +680,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/user/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/user/",
 			"event": [
 				{
 					"listen": "test",
@@ -703,10 +703,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/user/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/user/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -719,7 +719,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/materialfinish/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/materialfinish/1",
 			"event": [
 				{
 					"listen": "test",
@@ -742,10 +742,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/materialfinish/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/materialfinish/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -758,7 +758,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/material/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/material/",
 			"event": [
 				{
 					"listen": "test",
@@ -781,10 +781,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/material/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/material/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -797,7 +797,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/",
 			"event": [
 				{
 					"listen": "test",
@@ -820,10 +820,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -836,7 +836,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/1",
 			"event": [
 				{
 					"listen": "test",
@@ -859,10 +859,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -875,7 +875,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 			"event": [
 				{
 					"listen": "test",
@@ -898,10 +898,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -914,7 +914,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension/",
 			"event": [
 				{
 					"listen": "test",
@@ -937,10 +937,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -953,7 +953,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category/",
 			"event": [
 				{
 					"listen": "test",
@@ -976,10 +976,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -992,7 +992,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 			"event": [
 				{
 					"listen": "test",
@@ -1015,10 +1015,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1031,7 +1031,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/user",
+			"name": "https://lapr5-gc.azurewebsites.net/api/user",
 			"event": [
 				{
 					"listen": "test",
@@ -1054,10 +1054,10 @@
 					"raw": "{\n\t\"id\":1\n}"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/user",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/user",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1069,7 +1069,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/user/John",
+			"name": "https://lapr5-gc.azurewebsites.net/api/user/John",
 			"event": [
 				{
 					"listen": "test",
@@ -1092,10 +1092,10 @@
 					"raw": "{\n\t\"id\":1\n}"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/user/John",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/user/John",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1108,7 +1108,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/user/asdasdas",
+			"name": "https://lapr5-gc.azurewebsites.net/api/user/asdasdas",
 			"event": [
 				{
 					"listen": "test",
@@ -1131,10 +1131,10 @@
 					"raw": "{\n\t\"id\":1\n}"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/user/asdasdas",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/user/asdasdas",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1147,7 +1147,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 			"event": [
 				{
 					"listen": "test",
@@ -1170,10 +1170,10 @@
 					"raw": "{\n\t\"id\":1\n}"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1186,7 +1186,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1412",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1412",
 			"event": [
 				{
 					"listen": "test",
@@ -1209,10 +1209,10 @@
 					"raw": "{\n\t\"id\":1\n}"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1225,7 +1225,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 			"event": [
 				{
 					"listen": "test",
@@ -1255,10 +1255,10 @@
 					"raw": "{\n\t\"date\" : \"12-12-2018\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1271,7 +1271,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/2",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/2",
 			"event": [
 				{
 					"listen": "test",
@@ -1301,10 +1301,10 @@
 					"raw": "{\n\t\"date\" : \"12-12-2018\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/2",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/2",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1317,7 +1317,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category",
 			"event": [
 				{
 					"listen": "test",
@@ -1347,10 +1347,10 @@
 					"raw": "{\n\t\"name\" : \"cate\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1362,7 +1362,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category",
 			"event": [
 				{
 					"listen": "test",
@@ -1392,10 +1392,10 @@
 					"raw": "{\n\t\"id\": 2\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1407,7 +1407,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/category/2",
+			"name": "https://lapr5-gc.azurewebsites.net/api/category/2",
 			"event": [
 				{
 					"listen": "test",
@@ -1437,10 +1437,10 @@
 					"raw": "{\n\t\"categoryId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/category/2",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/category/2",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1453,7 +1453,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension",
 			"event": [
 				{
 					"listen": "test",
@@ -1483,10 +1483,10 @@
 					"raw": "{\n\t\"height\": 1,\n\t\"width\": 12\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1498,7 +1498,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension",
 			"event": [
 				{
 					"listen": "test",
@@ -1528,10 +1528,10 @@
 					"raw": "{\n\t\"height\": 1,\n\t\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1543,7 +1543,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 			"event": [
 				{
 					"listen": "test",
@@ -1573,10 +1573,10 @@
 					"raw": "{\n\t\"height\": 19,\n\t\"width\": 100\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1589,7 +1589,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/",
 			"event": [
 				{
 					"listen": "test",
@@ -1619,10 +1619,10 @@
 					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1635,7 +1635,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/",
 			"event": [
 				{
 					"listen": "test",
@@ -1665,10 +1665,10 @@
 					"raw": "{\n\t\"name\": \"finish\",\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1681,7 +1681,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/",
 			"event": [
 				{
 					"listen": "test",
@@ -1711,10 +1711,10 @@
 					"raw": "{\n\t\"name\": \"finish\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1727,7 +1727,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/1",
 			"event": [
 				{
 					"listen": "test",
@@ -1757,10 +1757,10 @@
 					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1773,7 +1773,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/505",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/505",
 			"event": [
 				{
 					"listen": "test",
@@ -1803,10 +1803,10 @@
 					"raw": "{\n\t\"name\": \"finish\",\n\t\"description\": \"desc1\"\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/505",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/505",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1819,7 +1819,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/material/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/material/1",
 			"event": [
 				{
 					"listen": "test",
@@ -1849,10 +1849,10 @@
 					"raw": "{\n\t\"name\": \"material\",\n\t\"description\": \"desc1\",\n\t\"finishId\":1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/material/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/material/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1865,7 +1865,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/material/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/material/",
 			"event": [
 				{
 					"listen": "test",
@@ -1895,10 +1895,10 @@
 					"raw": "{\n\t\"name\": \"material\",\n\t\"description\": \"desc1\",\n\t\"finishId\":1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/material/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/material/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1911,7 +1911,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product",
 			"event": [
 				{
 					"listen": "test",
@@ -1941,10 +1941,10 @@
 					"raw": "{\n\t\"name\": \"product\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -1956,7 +1956,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/1",
 			"event": [
 				{
 					"listen": "test",
@@ -1986,10 +1986,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2002,7 +2002,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/64",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/64",
 			"event": [
 				{
 					"listen": "test",
@@ -2032,10 +2032,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1,\n\t\"restrictionId\": 1,\n\t\"categoryId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/64",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/64",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2048,7 +2048,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/",
 			"event": [
 				{
 					"listen": "test",
@@ -2078,10 +2078,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123,\n\t\"dimensionId\": 1,\n\t\"materialId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2094,7 +2094,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/",
 			"event": [
 				{
 					"listen": "test",
@@ -2124,10 +2124,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2140,7 +2140,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/product/2",
+			"name": "https://lapr5-gc.azurewebsites.net/api/product/2",
 			"event": [
 				{
 					"listen": "test",
@@ -2163,10 +2163,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/product/2",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/product/2",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2179,7 +2179,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/1312",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/1312",
 			"event": [
 				{
 					"listen": "test",
@@ -2202,10 +2202,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/1312",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1312",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2218,7 +2218,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/catalog/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/catalog/1",
 			"event": [
 				{
 					"listen": "test",
@@ -2241,10 +2241,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/catalog/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2257,7 +2257,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/restriction/1412",
+			"name": "https://lapr5-gc.azurewebsites.net/api/restriction/1412",
 			"event": [
 				{
 					"listen": "test",
@@ -2280,10 +2280,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/restriction/1412",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/restriction/1412",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2296,7 +2296,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/order/1",
+			"name": "https://lapr5-gc.azurewebsites.net/api/order/1",
 			"event": [
 				{
 					"listen": "test",
@@ -2326,10 +2326,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/order/1",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/order/1",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2342,7 +2342,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/finish/3",
+			"name": "https://lapr5-gc.azurewebsites.net/api/finish/3",
 			"event": [
 				{
 					"listen": "test",
@@ -2372,10 +2372,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/finish/3",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/finish/3",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2388,7 +2388,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/material/3",
+			"name": "https://lapr5-gc.azurewebsites.net/api/material/3",
 			"event": [
 				{
 					"listen": "test",
@@ -2418,10 +2418,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/material/3",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/material/3",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
@@ -2434,7 +2434,7 @@
 			"response": []
 		},
 		{
-			"name": "https://arqsi-web.azurewebsites.net/api/dimension/2",
+			"name": "https://lapr5-gc.azurewebsites.net/api/dimension/2",
 			"event": [
 				{
 					"listen": "test",
@@ -2464,10 +2464,10 @@
 					"raw": "{\n\t\"name\": \"p\",\n\t\"description\": \"d\",\n\t\"price\": 123\n}\n"
 				},
 				"url": {
-					"raw": "https://arqsi-web.azurewebsites.net/api/dimension/2",
+					"raw": "https://lapr5-gc.azurewebsites.net/api/dimension/2",
 					"protocol": "https",
 					"host": [
-						"arqsi-web.azurewebsites.net"
+						"lapr5-gc.azurewebsites.net"
 					],
 					"port": "",
 					"path": [
