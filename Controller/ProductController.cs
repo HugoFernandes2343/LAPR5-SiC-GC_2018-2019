@@ -207,11 +207,9 @@ namespace Project.Controller
         {
             Product dbProd;
 
-            try
-            {
-                dbProd = await productRepository.FindById(Id);
-            }
-            catch (Exception)
+            dbProd = await productRepository.FindById(Id);
+            
+            if (dbProd==null)
             {
                 return NotFound();
             }
@@ -262,26 +260,20 @@ namespace Project.Controller
         public async Task<IActionResult> getParentProductLocal([FromRoute] long Id)
         {
             Product childProd;
-            try
+            childProd = await productRepository.FindChildProduct(Id);
+            if (childProd==null)
             {
-                childProd = await productRepository.FindChildProduct(Id);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message + "child prod");
+                return NotFound();
             }
 
             if (childProd.ParentId != null)
             {
                 Product parentProd;
 
-                try
+                parentProd = await productRepository.FindParentProduct(childProd);
+                if (parentProd==null)
                 {
-                    parentProd = await productRepository.FindParentProduct(childProd);
-                }
-                catch (Exception e)
-                {
-                    return BadRequest(e.Message + "parent prod");
+                return NotFound();
                 }
 
                 return Ok(parentProd);
