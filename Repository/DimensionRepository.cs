@@ -42,8 +42,7 @@ namespace SiC.Persistence
                 dimension.Depth = Depth;
 
             }
-            else if (((dto.Width > 0 && dto.Height > 0 && dto.Depth > 0) || (dto.Width ==  0 && dto.Height ==  0 && dto.Depth ==  0))
-            && dto.WidthMax == 0 && dto.HeightMax == 0 && dto.DepthMax == 0)
+            else if (dto.Width > 0 && dto.Height > 0 && dto.Depth > 0)
             {
                 var Width = new Measure(dto.Width);
 

@@ -43,19 +43,6 @@ namespace SiC.Test
             controller = new RestrictionController(context);
         }
 
-
-        [Fact]
-        public async void TestPutRestriction()
-        {
-            RestrictionDTO dto = new RestrictionDTO();
-
-            var result = await controller.PutRestriction((long)1, dto);
-            Assert.IsType<OkResult>(result);
-
-            var result2 = await controller.PutRestriction((long)1, null);
-            Assert.IsType<BadRequestResult>(result2);
-        }
-
         [Fact]
         public async void TestPostRestriction()
         {
@@ -65,6 +52,18 @@ namespace SiC.Test
             Assert.IsType<OkObjectResult>(result);
 
             var result2 = await controller.PostRestriction(null);
+            Assert.IsType<BadRequestResult>(result2);
+        }
+
+                [Fact]
+        public async void TestPutRestriction()
+        {
+            RestrictionDTO dto = new RestrictionDTO();
+
+            var result = await controller.PutRestriction((long)1, dto);
+            Assert.IsType<OkResult>(result);
+
+            var result2 = await controller.PutRestriction((long)1, null);
             Assert.IsType<BadRequestResult>(result2);
         }
 
@@ -81,7 +80,7 @@ namespace SiC.Test
                 rs.Add(raux);
             }
 
-            var result = await controller.DeleteRestriction((long)rs.Count);
+            var result = await controller.DeleteRestriction((long)rs.Count-1);
             Assert.IsType<OkObjectResult>(result);
 
             var result2 = await controller.DeleteRestriction((long)1000);

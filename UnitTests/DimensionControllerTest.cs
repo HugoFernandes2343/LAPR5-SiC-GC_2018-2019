@@ -55,6 +55,33 @@ namespace SiC.Test
             }
         }
 
+                [Fact]
+        public async void PostDimensionTest()
+        {
+            DimensionDTO dto = new DimensionDTO();
+            dto.Width = 150;
+            dto.Height = 100;
+            dto.Depth = 150;
+
+            DimensionDTO dto2 = new DimensionDTO();
+            dto2.Width = 0;
+            dto2.Height = 0;
+            dto2.Depth = 0;
+
+            //Should add normally
+            var result = await controller.PostDimension(dto);
+            Assert.IsType<OkObjectResult>(result);
+
+            //Can't post a null object
+            var result2 = await controller.PostDimension(null);
+            Assert.IsType<BadRequestResult>(result2);
+
+            //Can't add a dimension without valid measurements
+            var result3 = await controller.PostDimension(dto2);
+            Assert.IsType<BadRequestResult>(result3);
+
+        }
+
         [Fact]
         public async void GetDimensionByIdTest()
         {
@@ -94,33 +121,6 @@ namespace SiC.Test
         }
 
         [Fact]
-        public async void PostDimensionTest()
-        {
-            DimensionDTO dto = new DimensionDTO();
-            dto.Width = 150;
-            dto.Height = 100;
-            dto.Depth = 150;
-
-            DimensionDTO dto2 = new DimensionDTO();
-            dto2.Width = 0;
-            dto2.Height = 0;
-            dto2.Depth = 0;
-
-            //Should add normally
-            var result = await controller.PostDimension(dto);
-            Assert.IsType<OkObjectResult>(result);
-
-            //Can't post a null object
-            var result2 = await controller.PostDimension(null);
-            Assert.IsType<BadRequestResult>(result2);
-
-            //Can't add a dimension without measurements
-            var result3 = await controller.PostDimension(dto2);
-            Assert.IsType<BadRequestResult>(result3);
-
-        }
-
-        [Fact]
         public async void DeleteDimensionTest()
         {
             DimensionDTO d = new DimensionDTO();
@@ -136,7 +136,7 @@ namespace SiC.Test
                 ds.Add(daux);
             }
 
-            var result = await controller.DeleteDimension((long)ds.Count);
+            var result = await controller.DeleteDimension((long)ds.Count-1);
             Assert.IsType<OkObjectResult>(result);
             var result2 = await controller.DeleteDimension((long)100980);
             Assert.IsType<NotFoundResult>(result2);

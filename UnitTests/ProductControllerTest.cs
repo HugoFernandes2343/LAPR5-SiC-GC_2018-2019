@@ -77,25 +77,6 @@ namespace SiC.Test
 
         }
 
-
-        [Fact]
-        public async void TestPutProduct()
-        {
-            PostProductDTO dto = new PostProductDTO();
-            dto.Name = "dummy";
-            dto.Price = 100;
-
-
-            var result = await controller.PutProduct((long)1, dto);
-            Assert.IsType<OkObjectResult>(result);
-
-            var result2 = await controller.PutProduct((long)1000, dto);
-            Assert.IsType<NotFoundResult>(result2);
-
-            var result3 = await controller.PutProduct((long)1, null);
-            Assert.IsType<BadRequestResult>(result3);
-        }
-
         [Fact]
         public async Task TestPostProduct()
         {
@@ -135,6 +116,24 @@ namespace SiC.Test
         {
             var result = await controller.getParentProductLocal((long)1);
             Assert.IsType<NotFoundResult>(result);
+        }
+
+                [Fact]
+        public async void TestPutProduct()
+        {
+            PostProductDTO dto = new PostProductDTO();
+            dto.Name = "dummy";
+            dto.Price = 100;
+
+
+            var result = await controller.PutProduct((long)1, dto);
+            Assert.IsType<OkObjectResult>(result);
+
+            var result2 = await controller.PutProduct((long)1000, dto);
+            Assert.IsType<BadRequestResult>(result2);
+
+            var result3 = await controller.PutProduct((long)1, null);
+            Assert.IsType<BadRequestResult>(result3);
         }
 
         [Fact]
