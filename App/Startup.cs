@@ -27,6 +27,18 @@ namespace Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //add Cors to this API
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CORS",
+                b => b.WithOrigins("http://localhost:4200")/*Change this to production once its done */
+                .WithOrigins("https://lapr5-ui.herokuapp.com")
+                .WithOrigins("https://lapr5-enc.herokuapp.com")
+                .AllowAnyHeader()
+                .AllowAnyMethod());
+            }
+            );
+
             services.AddDbContext<PersistenceContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("PeristenceContext")));
 
@@ -49,6 +61,7 @@ namespace Project
             @TODO !WARNING 
             REMOVE THIS WHEN CREATING HTML DINAMICALLY!!!!!!!!
              */
+            app.UseCors("CORS");
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
