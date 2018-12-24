@@ -1,91 +1,92 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SiC.DTO;
-using SiC.Model;
+using SiC.DTOs;
+using SiC.Models;
 
-namespace SiC.Persistence
+namespace SiC.Repository
 {
     public class RestrictionRepository : Repository<Restriction, RestrictionDTO>
     {
-        private PersistenceContext context;
+        private SiCContext context;
 
-        public RestrictionRepository(PersistenceContext context)
+        public RestrictionRepository(SiCContext context) 
         {
             this.context = context;
         }
-
         public async Task<Restriction> Add(RestrictionDTO dto)
         {
-            Restriction restriction = new Restriction();
+            Combination combination = await context.Combination.SingleOrDefaultAsync(c => c.containedProduct.name == dto.combination.containedProduct && c.containingProduct.name == dto.combination.containingProduct);
 
-            //validation of restrictions attributes..
+            if (combination == null)
+            {
+                return null;
+            }
 
-            context.restrictions.Add(restriction);
-            await context.SaveChangesAsync();
+            if (dto is RestrictionDimDTO)
+            {
+                RestrictionDimDTO res_dim_dto = (RestrictionDimDTO)dto;
+                RestrictionDim res_dim = new RestrictionDim();
+                res_dim.combination = combination;
+                res_dim.x = res_dim_dto.x;
+                res_dim.y = res_dim_dto.y;
+                res_dim.z = res_dim_dto.z;
 
-            return restriction;
+                context.Restriction.Add(res_dim);
+                await context.SaveChangesAsync();
+
+                return res_dim;
+            }
+
+            if (dto is RestrictionMatDTO)
+            {
+                RestrictionMatDTO res_mat_dto = (RestrictionMatDTO)dto;
+                RestrictionMat res_mat = new RestrictionMat();
+                Material containingMaterial = await context.Material.SingleOrDefaultAsync(m => m.name == res_mat_dto.containingMaterial);
+                Material containedMaterial = await context.Material.SingleOrDefaultAsync(m => m.name == res_mat_dto.containedMaterial);
+                
+                if(containedMaterial == null) return null;
+                if(containingMaterial == null) return null;
+
+                res_mat.combination = combination;
+                res_mat.containingMaterial = containingMaterial;
+                res_mat.containedMaterial = containedMaterial;
+
+                context.Restriction.Add(res_mat);
+                await context.SaveChangesAsync();
+
+                return res_mat;
+            }
+
+            return null;
         }
 
-        public async Task<Restriction> Edit(long id, RestrictionDTO dto)
+        public async Task<Restriction> Edit(int id, RestrictionDTO dto)
         {
-            var restriction = await context.restrictions.FindAsync(id);
-
-            if (restriction == null) return null;
-
-            context.Entry(restriction).State = EntityState.Modified;
-            await context.SaveChangesAsync();
-
-            return restriction;
-
+            throw new System.NotImplementedException();
         }
 
         public IEnumerable<Restriction> FindAll()
         {
-            return context.restrictions;
+            return context.Restriction;
         }
 
-        public async Task<Restriction> FindById(long id)
+        public async Task<Restriction> FindById(int id)
         {
-            var restriction = await context.restrictions.FindAsync(id);
+            return await context.Restriction.FindAsync(id);
+        }
 
-            List<ChildMaterialRestriction> childMaterialRestrictions =
-                await context.childMaterialRestrictions
-                .Where(c => c.RestrictionId == id).ToListAsync();
-
-            List<Material> materials = await context.materials.ToListAsync();
-
-            List<Material> childMaterials = new List<Material>();
-
-            foreach(ChildMaterialRestriction c in childMaterialRestrictions){
-                foreach(Material material in materials){
-                    
-                    if(c.MaterialId == material.Id){
-                        childMaterials.Add(material);
-                    }
-
-                }
+        public async Task<Restriction> Remove(int id)
+        {
+            var restriction = await context.Restriction.FindAsync(id);
+            if (restriction == null)
+            {
+                return null;
             }
 
-            restriction.childMaterialRestrictions = childMaterials;
-
-            return restriction;
-
-        }
-
-        public async Task<Restriction> Remove(long id)
-        {
-            var restriction = await context.restrictions.FindAsync(id);
-
-            if (restriction == null) return null;
-
-            context.restrictions.Remove(restriction);
+            context.Restriction.Remove(restriction);
             await context.SaveChangesAsync();
-
             return restriction;
-
-
         }
     }
 }

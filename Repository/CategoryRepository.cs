@@ -1,146 +1,84 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SiC.DTO;
-using SiC.Model;
+using SiC.DTOs;
+using SiC.Models;
 
-namespace SiC.Persistence {
+namespace SiC.Repository
+{
+    public class CategoryRepository : Repository<Category, CategoryDTO>
+    {
+        private SiCContext context;
 
-    public class CategoryRepository : Repository<Category, PostCategoryDTO> {
+        public CategoryRepository(SiCContext context)
+        {
+            this.context = context;
+        }
+        public async Task<Category> Add(CategoryDTO dto)
+        {
+            Category category = dto.convertToCategory();
+            List<Category> categories = category.allFathers();
+            foreach (Category c in categories)
+            {
+                if (!context.Category.Any(e => e.name == c.name))
+                {
+                    return null;
+                }
+            }
+            var father = await context.Category.SingleOrDefaultAsync(e => e.name == category.parent.name);
+            category.parent = father;
 
-        private PersistenceContext _context;
+            context.Category.Add(category);
+            await context.SaveChangesAsync();
 
-        public CategoryRepository(PersistenceContext context){
-            _context = context;
+            return category;
+        }
+
+        public async Task<Category> Edit(int id, CategoryDTO dto)
+        {
+            var category = await context.Category.FindAsync(id);
+
+            if (category == null) return null;
+
+            string name = dto.name.Split(";").Last();
+
+            if (context.Category.Any(c => c.name == name)) return null;
+
+            category.name = name;
+
+            context.Entry(category).State = EntityState.Modified;
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return null;
+            }
+            return category;
         }
 
         public IEnumerable<Category> FindAll()
         {
-            return _context.categories.Include(x => x.SubCategories)
-                                                     .Select(f => new Category
-                                                     {
-                                                         Id = f.Id,
-                                                         Name = f.Name,
-                                                         ParentID = f.ParentID,
-                                                         SubCategories = f.SubCategories
-                                                     }).ToList();
-
+            return context.Category;
         }
 
-        public async Task<IEnumerable<Category>> FindAllAsync(){
-            return await _context.categories.Select(f => new Category
-                                                     {
-                                                         Id = f.Id,
-                                                         Name = f.Name,
-                                                         ParentID = f.ParentID,
-                                                         SubCategories = f.SubCategories
-                                                     }).ToListAsync();
-        }
-
-        public async Task<Category> FindById(long id)
+        public async Task<Category> FindById(int id)
         {
-            Category dbCategory = await _context.categories
-                                  .Include(y => y.SubCategories)
-                                  .Where(y => y.Id == id)
-                                  .Select(y => new Category
-                                  {
-                                      Id = y.Id,
-                                      Name = y.Name,
-                                      ParentID = y.ParentID,
-                                      SubCategories = y.SubCategories
-                                  }).FirstOrDefaultAsync();
-
-            if(dbCategory == null) return null;
-            
-            List<Category> sub = dbCategory.SubCategories.ToList();
-            dbCategory.SubCategories = sub;
-
-            return dbCategory;
+            return await context.Category.FindAsync(id);
         }
 
-        public async Task<Category> Edit(long id, PostCategoryDTO dto)
+        public async Task<Category> Remove(int id)
         {
-            if (dto == null) return null;
+            var category = await context.Category.FindAsync(id);
 
-                var category = await _context.categories.FindAsync(id);
+            if (category == null) return null;
 
-                if (category == null)
-                {
-                    return null;
-                }
-                else
-                {
+            if (context.Category.Any(c => c.parent.CategoryId == category.CategoryId)) return null;
 
-                if (dto.ParentID == -1)
-                {
-                    category.Name = dto.Name;
-                }
-                else if (dto.ParentID == null)
-                {
-                    category.Name = dto.Name;
-                    category.ParentID = null;
-                }
-                else
-                {
-                    category.Name = dto.Name;
-                    category.ParentID = dto.ParentID;
-                }
-
-                _context.Entry(category).State = EntityState.Modified;
-
-                try
-                {
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    throw;
-                }
-
-            }
-            
-            return category;
-        }
-
-        public async Task<Category> Add(PostCategoryDTO dto)
-        {
-            if (dto == null) return null;
-
-            Category category = new Category();
-
-            if (dto.Name == null) return null;
-
-            if (dto.ParentID == -1)
-            {
-                category.Name = dto.Name;
-                _context.categories.Add(category);
-                await _context.SaveChangesAsync();
-            }
-            else
-            {
-                Category parentCategory = await _context.categories
-                                            .Include(x => x.SubCategories)
-                                            .Where(x => x.Id == dto.ParentID).FirstAsync();
-
-                category.Name = dto.Name;
-                parentCategory.SubCategories.Add(category);
-                await _context.SaveChangesAsync();
-                
-            }
-
-            return category;
-        }
-
-        public async Task<Category> Remove(long id)
-        {
-            var category = await _context.categories.FindAsync(id);
-
-            if(category == null) return null;
-
-            _context.categories.Remove(category);
-            await _context.SaveChangesAsync();
+            context.Category.Remove(category);
+            await context.SaveChangesAsync();
 
             return category;
         }
