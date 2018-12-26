@@ -10,6 +10,7 @@ namespace SiC.Models
 
         public int MaterialId { get; set; }
         public string name { get; set; }
+        public string description { get; set;}
 
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
 

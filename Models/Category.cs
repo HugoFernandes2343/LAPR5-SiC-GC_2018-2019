@@ -10,6 +10,7 @@ namespace SiC.Models
 
         public int CategoryId { get; set; }
         public string name { get; set; }
+        public string description { get; set; }
         public virtual Category parent { get; set; }
 
         public Category(string name, Category parent)
@@ -28,17 +29,21 @@ namespace SiC.Models
 
         }
 
-        public List<Category> allFathers(){
-            if(parent==null){
+        public List<Category> allFathers()
+        {
+            if (parent == null)
+            {
                 return new List<Category>();
             }
 
             return allFathersSearch(new List<Category>(), this.parent);
         }
 
-        private List<Category> allFathersSearch(List<Category> categories, Category cat){
+        private List<Category> allFathersSearch(List<Category> categories, Category cat)
+        {
             categories.Add(cat);
-            if(cat.parent==null){
+            if (cat.parent == null)
+            {
                 return categories;
             }
             return allFathersSearch(categories, cat.parent);

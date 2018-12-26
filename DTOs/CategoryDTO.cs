@@ -6,6 +6,7 @@ namespace SiC.DTOs
     {
         public string name { get; set; }
         public int CategoryId { get; set; }
+        public string description { get; set; }
 
 
         public CategoryDTO(string name, Category category)

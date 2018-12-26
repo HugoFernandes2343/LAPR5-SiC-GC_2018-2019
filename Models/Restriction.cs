@@ -6,6 +6,7 @@ namespace SiC.Models
     public class Restriction
     {
         public int RestrictionId { get; set; }
+        public string description { get; set;}
         public virtual Combination combination { get; set; }
 
     }
