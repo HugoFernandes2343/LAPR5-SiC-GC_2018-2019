@@ -19,7 +19,7 @@ namespace SiC.Controllers
 
         public CatalogController(SiCContext context)
         {
-           catalogRepository = new CatalogRepository(context);
+            catalogRepository = new CatalogRepository(context);
         }
 
         // GET: api/Catalog
@@ -28,19 +28,22 @@ namespace SiC.Controllers
         public IEnumerable<CatalogDTO> GetCatalog()
         {
             List<CatalogDTO> dtos = new List<CatalogDTO>();
-            foreach(Catalog catalog in catalogRepository.FindAll()){
+            foreach (Catalog catalog in catalogRepository.FindAll())
+            {
                 CatalogDTO dto = new CatalogDTO();
-                dto.CatalogId=catalog.CatalogId;
-                dto.Date=catalog.Date;
+                dto.CatalogId = catalog.CatalogId;
+                dto.Date = catalog.Date;
+                dto.CatalogDescription = catalog.CatalogDescription;
+                dto.CatalogName = catalog.CatalogName;
                 dtos.Add(dto);
             }
-            
+
             return dtos;
         }
 
         // GET: api/Catalog/id
         //Returns a specific catalog
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetCatalog([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -55,10 +58,26 @@ namespace SiC.Controllers
                 return NotFound();
             }
             CatalogDTO dto = new CatalogDTO();
-            dto.CatalogId=catalog.CatalogId;
-            dto.Date=catalog.Date;
+            dto.CatalogId = catalog.CatalogId;
+            dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
 
-            return Ok(catalog);
+            foreach (Product prod in catalog.Products)
+            {
+                ProductDTO prodDTO = new ProductDTO();
+                prodDTO.ProductId = prod.ProductId;
+                prodDTO.name = prod.name;
+                prodDTO.description = prod.description;
+                //get Category
+                CategoryDTO catDTO = new CategoryDTO();
+                catDTO.CategoryId = prod.category.CategoryId;
+                catDTO.name = prod.category.name;
+                catDTO.description = prod.category.description;
+
+                dto.products.Add(prodDTO);
+            }
+
+            return Ok(dto);
         }
 
         // PUT: api/Catalog/id
@@ -76,15 +95,16 @@ namespace SiC.Controllers
                 return BadRequest();
             }
 
-           var catalog = await catalogRepository.FindById(id);
+            var catalog = await catalogRepository.FindById(id);
 
-           if (catalog == null)
+            if (catalog == null)
             {
                 return BadRequest();
             }
             CatalogDTO dto = new CatalogDTO();
-            dto.CatalogId=catalog.CatalogId;
-            dto.Date=catalog.Date;
+            dto.CatalogId = catalog.CatalogId;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.Date = catalog.Date;
 
             return Ok(dto);
         }
@@ -100,10 +120,11 @@ namespace SiC.Controllers
             }
 
             var catalog = await catalogRepository.Add(catalogDTO);
-            
+
             CatalogDTO dto = new CatalogDTO();
-            dto.CatalogId=catalog.CatalogId;
-            dto.Date=catalog.Date;
+            dto.CatalogId = catalog.CatalogId;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.Date = catalog.Date;
 
             return CreatedAtAction("GetCatalog", dto);
         }
@@ -125,8 +146,9 @@ namespace SiC.Controllers
             }
 
             CatalogDTO dto = new CatalogDTO();
-            dto.CatalogId=catalog.CatalogId;
-            dto.Date=catalog.Date;
+            dto.CatalogId = catalog.CatalogId;
+            dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
 
             return Ok(dto);
         }
