@@ -29,6 +29,7 @@ namespace SiC.Repository
 
             Product product = new Product();
             product.name = dto.name;
+            product.description = dto.description;
             product.category = category;
             product.dimensions = dims;
 
@@ -45,9 +46,10 @@ namespace SiC.Repository
 
             if (product == null) return null;
 
-            if (context.Product.Any(p => p.name == dto.name)) return null;
+            if (context.Product.Any(p => p.name == dto.name && p.ProductId != id)) return null;
 
             product.name = dto.name;
+            product.description = dto.description;
 
             context.Entry(product).State = EntityState.Modified;
 
@@ -81,7 +83,7 @@ namespace SiC.Repository
 
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
-               context.ProductMaterial.Remove(pm);
+                context.ProductMaterial.Remove(pm);
             }
 
             foreach (Dimension dim in product.dimensions)
@@ -149,13 +151,13 @@ namespace SiC.Repository
             var product = await context.Product.FindAsync(id);
 
             if (product == null) return null;
-            
+
             List<Restriction> restrictions = new List<Restriction>();
             var query = from r in context.Restriction where r.combination.containingProduct.ProductId == id || r.combination.containedProduct.ProductId == id select r;
             restrictions = query.ToList();
 
-            return restrictions;            
+            return restrictions;
         }
-        
+
     }
 }

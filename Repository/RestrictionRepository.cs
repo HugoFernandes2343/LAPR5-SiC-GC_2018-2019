@@ -28,6 +28,7 @@ namespace SiC.Repository
                 RestrictionDimDTO res_dim_dto = (RestrictionDimDTO)dto;
                 RestrictionDim res_dim = new RestrictionDim();
                 res_dim.combination = combination;
+                res_dim.description = res_dim_dto.description;
                 res_dim.x = res_dim_dto.x;
                 res_dim.y = res_dim_dto.y;
                 res_dim.z = res_dim_dto.z;
@@ -49,6 +50,7 @@ namespace SiC.Repository
                 if(containingMaterial == null) return null;
 
                 res_mat.combination = combination;
+                res_mat.description = res_mat_dto.description;
                 res_mat.containingMaterial = containingMaterial;
                 res_mat.containedMaterial = containedMaterial;
 

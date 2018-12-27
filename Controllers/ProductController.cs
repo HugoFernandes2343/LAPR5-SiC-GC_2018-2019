@@ -33,21 +33,24 @@ namespace SiC.Controllers
                 CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
+                dto.description = product.description;
                 dto.dimensions = new List<DimensionDTO>();
                 dto.materials = new List<MaterialDTO>();
                 foreach (ProductMaterial pm in product.ProductMaterials)
                 {
                     MaterialDTO mat_dto = new MaterialDTO();
                     mat_dto.name = pm.Material.name;
+                    mat_dto.description = pm.Material.description;
                     mat_dto.MaterialId = pm.Material.MaterialId;
-                    mat_dto.finishesDTO = new List<FinishingDTO>();
+                    mat_dto.finishes = new List<FinishingDTO>();
 
                     foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                     {
                         FinishingDTO fdto = new FinishingDTO();
                         fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.description = mf.Finishing.description;
                         fdto.name = mf.Finishing.name;
-                        mat_dto.finishesDTO.Add(fdto);
+                        mat_dto.finishes.Add(fdto);
                     }
 
                     dto.materials.Add(mat_dto);
@@ -100,21 +103,24 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
                 MaterialDTO mat_dto = new MaterialDTO();
                 mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
                 mat_dto.MaterialId = pm.Material.MaterialId;
-                mat_dto.finishesDTO = new List<FinishingDTO>();
+                mat_dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    mat_dto.finishesDTO.Add(fdto);
+                    mat_dto.finishes.Add(fdto);
                 }
 
                 dto.materials.Add(mat_dto);
@@ -171,21 +177,24 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
                 MaterialDTO mat_dto = new MaterialDTO();
                 mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
                 mat_dto.MaterialId = pm.Material.MaterialId;
-                mat_dto.finishesDTO = new List<FinishingDTO>();
+                mat_dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    mat_dto.finishesDTO.Add(fdto);
+                    mat_dto.finishes.Add(fdto);
                 }
 
                 dto.materials.Add(mat_dto);
@@ -237,21 +246,24 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
                 MaterialDTO mat_dto = new MaterialDTO();
                 mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
                 mat_dto.MaterialId = pm.Material.MaterialId;
-                mat_dto.finishesDTO = new List<FinishingDTO>();
+                mat_dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    mat_dto.finishesDTO.Add(fdto);
+                    mat_dto.finishes.Add(fdto);
                 }
 
                 dto.materials.Add(mat_dto);
@@ -303,21 +315,24 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
                 MaterialDTO mat_dto = new MaterialDTO();
                 mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
                 mat_dto.MaterialId = pm.Material.MaterialId;
-                mat_dto.finishesDTO = new List<FinishingDTO>();
+                mat_dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    mat_dto.finishesDTO.Add(fdto);
+                    mat_dto.finishes.Add(fdto);
                 }
 
                 dto.materials.Add(mat_dto);
@@ -373,21 +388,24 @@ namespace SiC.Controllers
                 CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
+                dto.description = product.description;
                 dto.dimensions = new List<DimensionDTO>();
                 dto.materials = new List<MaterialDTO>();
                 foreach (ProductMaterial pm in product.ProductMaterials)
                 {
                     MaterialDTO mat_dto = new MaterialDTO();
                     mat_dto.name = pm.Material.name;
+                    mat_dto.description = pm.Material.description;
                     mat_dto.MaterialId = pm.Material.MaterialId;
-                    mat_dto.finishesDTO = new List<FinishingDTO>();
+                    mat_dto.finishes = new List<FinishingDTO>();
 
                     foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                     {
                         FinishingDTO fdto = new FinishingDTO();
                         fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.description = mf.Finishing.description;
                         fdto.name = mf.Finishing.name;
-                        mat_dto.finishesDTO.Add(fdto);
+                        mat_dto.finishes.Add(fdto);
                     }
 
                     dto.materials.Add(mat_dto);
@@ -447,21 +465,24 @@ namespace SiC.Controllers
                 CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
+                dto.description = product.description;
                 dto.dimensions = new List<DimensionDTO>();
                 dto.materials = new List<MaterialDTO>();
                 foreach (ProductMaterial pm in product.ProductMaterials)
                 {
                     MaterialDTO mat_dto = new MaterialDTO();
                     mat_dto.name = pm.Material.name;
+                    mat_dto.description = pm.Material.description;
                     mat_dto.MaterialId = pm.Material.MaterialId;
-                    mat_dto.finishesDTO = new List<FinishingDTO>();
+                    mat_dto.finishes = new List<FinishingDTO>();
 
                     foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                     {
                         FinishingDTO fdto = new FinishingDTO();
                         fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.description = mf.Finishing.description;
                         fdto.name = mf.Finishing.name;
-                        mat_dto.finishesDTO.Add(fdto);
+                        mat_dto.finishes.Add(fdto);
                     }
 
                     dto.materials.Add(mat_dto);
@@ -516,21 +537,24 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
             {
                 MaterialDTO mat_dto = new MaterialDTO();
                 mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
                 mat_dto.MaterialId = pm.Material.MaterialId;
-                mat_dto.finishesDTO = new List<FinishingDTO>();
+                mat_dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    mat_dto.finishesDTO.Add(fdto);
+                    mat_dto.finishes.Add(fdto);
                 }
 
                 dto.materials.Add(mat_dto);
@@ -593,6 +617,7 @@ namespace SiC.Controllers
                     RestrictionDim res_dim = (RestrictionDim)restriction;
                     RestrictionDimDTO dto = new RestrictionDimDTO();
                     dto.combination = combination;
+                    dto.description = res_dim.description;
                     dto.RestrictionId = res_dim.RestrictionId;
                     dto.x = res_dim.x;
                     dto.y = res_dim.y;
@@ -605,6 +630,7 @@ namespace SiC.Controllers
                     RestrictionMat res_mat = (RestrictionMat)restriction;
                     RestrictionMatDTO dto = new RestrictionMatDTO();
                     dto.combination = combination;
+                    dto.description = res_mat.description;
                     dto.RestrictionId = res_mat.RestrictionId;
                     dto.containingMaterial = res_mat.containingMaterial.name;
                     dto.containedMaterial = res_mat.containedMaterial.name;

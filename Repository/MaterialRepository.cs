@@ -22,6 +22,7 @@ namespace SiC.Repository
 
             Material material = new Material();
             material.name = dto.name;
+            material.description = dto.description;
             context.Material.Add(material);
             
             await context.SaveChangesAsync();
@@ -38,9 +39,10 @@ namespace SiC.Repository
                 return null;
             }
 
-            if (context.Material.Any(m => m.name == dto.name)) return null;
+            if (context.Material.Any(m => m.name == dto.name && m.MaterialId != id)) return null;
 
             material.name = dto.name;
+            material.description = dto.description;
             context.Entry(material).State = EntityState.Modified;
 
             try

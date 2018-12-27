@@ -33,15 +33,17 @@ namespace SIC.Controllers
             {
                 MaterialDTO dto = new MaterialDTO();
                 dto.name = material.name;
+                dto.description = material.description;
                 dto.MaterialId = material.MaterialId;
-                dto.finishesDTO = new List<FinishingDTO>();
+                dto.finishes = new List<FinishingDTO>();
 
                 foreach (MaterialFinishing mf in material.MaterialFinishings)
                 {
                     FinishingDTO fdto = new FinishingDTO();
                     fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
-                    dto.finishesDTO.Add(fdto);
+                    dto.finishes.Add(fdto);
                 }
 
                 dtos.Add(dto);
@@ -68,15 +70,17 @@ namespace SIC.Controllers
 
             MaterialDTO dto = new MaterialDTO();
             dto.name = material.name;
+            dto.description = material.description;
             dto.MaterialId = material.MaterialId;
-            dto.finishesDTO = new List<FinishingDTO>();
+            dto.finishes = new List<FinishingDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
                 FinishingDTO fdto = new FinishingDTO();
                 fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
-                dto.finishesDTO.Add(fdto);
+                dto.finishes.Add(fdto);
             }
 
             return Ok(dto);
@@ -104,15 +108,17 @@ namespace SIC.Controllers
 
             MaterialDTO dto = new MaterialDTO();
             dto.name = material.name;
+            dto.description = material.description;
             dto.MaterialId = material.MaterialId;
-            dto.finishesDTO = new List<FinishingDTO>();
+            dto.finishes = new List<FinishingDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
                 FinishingDTO fdto = new FinishingDTO();
                 fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
-                dto.finishesDTO.Add(fdto);
+                dto.finishes.Add(fdto);
             }
 
             return Ok(dto);
@@ -136,15 +142,17 @@ namespace SIC.Controllers
 
             MaterialDTO dto = new MaterialDTO();
             dto.name = material.name;
+            dto.description = material.description;
             dto.MaterialId = material.MaterialId;
-            dto.finishesDTO = new List<FinishingDTO>();
+            dto.finishes = new List<FinishingDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
                 FinishingDTO fdto = new FinishingDTO();
                 fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
-                dto.finishesDTO.Add(fdto);
+                dto.finishes.Add(fdto);
             }
 
             return CreatedAtAction("GetMaterial", dto);
@@ -167,15 +175,17 @@ namespace SIC.Controllers
 
             MaterialDTO dto = new MaterialDTO();
             dto.name = material.name;
+            dto.description = material.description;
             dto.MaterialId = material.MaterialId;
-            dto.finishesDTO = new List<FinishingDTO>();
+            dto.finishes = new List<FinishingDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
                 FinishingDTO fdto = new FinishingDTO();
                 fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
-                dto.finishesDTO.Add(fdto);
+                dto.finishes.Add(fdto);
             }
             
             return Ok(dto);

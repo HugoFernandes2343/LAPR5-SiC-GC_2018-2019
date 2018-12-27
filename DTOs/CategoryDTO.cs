@@ -12,6 +12,7 @@ namespace SiC.DTOs
         public CategoryDTO(string name, Category category)
         {
             this.name = convertToTaxonomy(name, category);
+            this.description = category.description;
             this.CategoryId = category.CategoryId;
         }
 

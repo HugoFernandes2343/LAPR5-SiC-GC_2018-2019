@@ -30,6 +30,7 @@ namespace SiC.Controllers
             foreach (Finishing finishing in finishingRepository.FindAll()){
                 FinishingDTO dto = new FinishingDTO();
                 dto.finishingId = finishing.FinishingId;
+                dto.description = finishing.description;
                 dto.name = finishing.name;
                 dtos.Add(dto);
             }
@@ -54,9 +55,10 @@ namespace SiC.Controllers
 
             FinishingDTO dto = new FinishingDTO();
             dto.finishingId = finishing.FinishingId;
+            dto.description = finishing.description;
             dto.name = finishing.name;
 
-            return View("Details", dto);
+            return Ok(dto);
         }
 
         // PUT: api/Finishing/5
@@ -81,6 +83,7 @@ namespace SiC.Controllers
 
             FinishingDTO dto = new FinishingDTO();
             dto.finishingId = finishing.FinishingId;
+            dto.description = finishing.description;
             dto.name = finishing.name;
 
             return Ok(dto);
@@ -103,6 +106,7 @@ namespace SiC.Controllers
 
             FinishingDTO dto = new FinishingDTO();
             dto.finishingId = finishing.FinishingId;
+            dto.description = finishing.description;
             dto.name = finishing.name;
 
             return CreatedAtAction("GetFinishing", dto);
@@ -125,6 +129,7 @@ namespace SiC.Controllers
 
             FinishingDTO dto = new FinishingDTO();
             dto.finishingId = finishing.FinishingId;
+            dto.description = finishing.description;
             dto.name = finishing.name;
 
             return Ok(dto);

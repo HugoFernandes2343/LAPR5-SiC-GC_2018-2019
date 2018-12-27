@@ -40,6 +40,7 @@ namespace SiC.Controllers
                     RestrictionDim res_dim = (RestrictionDim)restriction;
                     RestrictionDimDTO dto = new RestrictionDimDTO();
                     dto.combination = combination;
+                    dto.description = res_dim.description;
                     dto.RestrictionId = res_dim.RestrictionId;
                     dto.x = res_dim.x;
                     dto.y = res_dim.y;
@@ -52,6 +53,7 @@ namespace SiC.Controllers
                     RestrictionMat res_mat = (RestrictionMat)restriction;
                     RestrictionMatDTO dto = new RestrictionMatDTO();
                     dto.combination = combination;
+                    dto.description = res_mat.description;
                     dto.RestrictionId = res_mat.RestrictionId;
                     dto.containingMaterial = res_mat.containingMaterial.name;
                     dto.containedMaterial = res_mat.containedMaterial.name;
@@ -89,6 +91,7 @@ namespace SiC.Controllers
                 RestrictionDim res_dim = (RestrictionDim)restriction;
                 RestrictionDimDTO dto = new RestrictionDimDTO();
                 dto.combination = combination;
+                dto.description = res_dim.description;
                 dto.RestrictionId = res_dim.RestrictionId;
                 dto.x = res_dim.x;
                 dto.y = res_dim.y;
@@ -101,6 +104,7 @@ namespace SiC.Controllers
                 RestrictionMat res_mat = (RestrictionMat)restriction;
                 RestrictionMatDTO dto = new RestrictionMatDTO();
                 dto.combination = combination;
+                dto.description = res_mat.description;
                 dto.RestrictionId = res_mat.RestrictionId;
                 dto.containingMaterial = res_mat.containingMaterial.name;
                 dto.containedMaterial = res_mat.containedMaterial.name;
@@ -134,6 +138,7 @@ namespace SiC.Controllers
             RestrictionDim res_dim = (RestrictionDim)restriction;
             RestrictionDimDTO dto = new RestrictionDimDTO();
             dto.combination = combination;
+            dto.description = res_dim.description;
             dto.RestrictionId = res_dim.RestrictionId;
             dto.x = res_dim.x;
             dto.y = res_dim.y;
@@ -165,6 +170,7 @@ namespace SiC.Controllers
             RestrictionMat res_mat = (RestrictionMat)restriction;
             RestrictionMatDTO dto = new RestrictionMatDTO();
             dto.combination = combination;
+            dto.description = res_mat.description;
             dto.RestrictionId = res_mat.RestrictionId;
             dto.containingMaterial = res_mat.containingMaterial.name;
             dto.containedMaterial = res_mat.containedMaterial.name;
@@ -198,6 +204,7 @@ namespace SiC.Controllers
                 RestrictionDim res_dim = (RestrictionDim)restriction;
                 RestrictionDimDTO dto = new RestrictionDimDTO();
                 dto.combination = combination;
+                dto.description = res_dim.description;
                 dto.RestrictionId = res_dim.RestrictionId;
                 dto.x = res_dim.x;
                 dto.y = res_dim.y;
@@ -210,6 +217,7 @@ namespace SiC.Controllers
                 RestrictionMat res_mat = (RestrictionMat)restriction;
                 RestrictionMatDTO dto = new RestrictionMatDTO();
                 dto.combination = combination;
+                dto.description = res_mat.description;
                 dto.RestrictionId = res_mat.RestrictionId;
                 dto.containingMaterial = res_mat.containingMaterial.name;
                 dto.containedMaterial = res_mat.containedMaterial.name;

@@ -22,6 +22,7 @@ namespace SiC.Repository
 
             Finishing finishing = new Finishing();
             finishing.name = dto.name;
+            finishing.description = dto.description;
             context.Finishing.Add(finishing);
             await context.SaveChangesAsync();
 
@@ -34,9 +35,10 @@ namespace SiC.Repository
 
             if (finishing == null) return null;
 
-            if (context.Finishing.Any(f => f.name == dto.name)) return null;
+            if (context.Finishing.Any(f => f.name == dto.name && f.FinishingId != id)) return null;
 
             finishing.name = dto.name;
+            finishing.description = dto.description;
 
             context.Entry(finishing).State = EntityState.Modified;
             try
