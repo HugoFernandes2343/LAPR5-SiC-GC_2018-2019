@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace SiC.Repository
 
             Material material = new Material();
             material.name = dto.name;
+            material.MaterialFinishings = new List<MaterialFinishing>();
             material.description = dto.description;
             context.Material.Add(material);
             
@@ -84,6 +86,40 @@ namespace SiC.Repository
             context.Material.Remove(material);
             await context.SaveChangesAsync();
             
+            return material;
+        }
+
+        internal async Task<Material> AddMaterialFinishing(int id, int idf)
+        {
+            var material = await context.Material.FindAsync(id);
+            var finishing = await context.Finishing.FindAsync(idf);
+
+            if(material == null || finishing == null) return null;
+
+            if(context.MaterialFinishing.Any(mfs => mfs.FinishingId == idf && mfs.MaterialId == id)) return null;
+
+            MaterialFinishing mf = new MaterialFinishing();
+            mf.FinishingId = finishing.FinishingId;
+            mf.Finishing = finishing;
+            mf.MaterialId = material.MaterialId;
+            mf.Material = material;
+
+            finishing.MaterialFinishings.Add(mf);
+            material.MaterialFinishings.Add(mf);
+
+            
+            context.Entry(material).State = EntityState.Modified;
+            context.Entry(finishing).State = EntityState.Modified;
+            context.MaterialFinishing.Add(mf);
+
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return null;
+            }
             return material;
         }
     }

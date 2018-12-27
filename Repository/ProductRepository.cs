@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -159,5 +160,62 @@ namespace SiC.Repository
             return restrictions;
         }
 
+        internal async Task<Product> AddProductMaterial(int id, int idm)
+        {
+            var product = await context.Product.FindAsync(id);
+            var material = await context.Material.FindAsync(idm);
+
+            if (product == null || material == null) return null;
+
+            if (context.ProductMaterial.Any(pms => pms.ProductId == id && pms.MaterialId == idm)) return null;
+
+            ProductMaterial pm = new ProductMaterial();
+            pm.ProductId = product.ProductId;
+            pm.Product = product;
+            pm.MaterialId = material.MaterialId;
+            pm.Material = material;
+
+            product.ProductMaterials.Add(pm);
+            material.ProductMaterials.Add(pm);
+
+            context.Entry(material).State = EntityState.Modified;
+            context.Entry(product).State = EntityState.Modified;
+            context.ProductMaterial.Add(pm);
+
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return null;
+            }
+            return product;
+        }
+
+        internal async Task<Product> AddDimension(int id, int idd)
+        {
+            var product = await context.Product.FindAsync(id);
+            var dimension = await context.Dimension.FindAsync(idd);
+
+            if (product == null || dimension == null) return null;
+
+            if (product.dimensions.Contains(dimension)) return null;
+
+            product.dimensions.Add(dimension);
+
+            context.Entry(product).State = EntityState.Modified;
+
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return null;
+            }
+            return product;
+
+        }
     }
 }

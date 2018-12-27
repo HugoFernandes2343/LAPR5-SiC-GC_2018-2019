@@ -102,7 +102,8 @@ namespace SIC.Controllers
 
             var material = await materialRepository.Edit(id, materialDTO);
 
-            if(material == null){
+            if (material == null)
+            {
                 return BadRequest();
             }
 
@@ -169,7 +170,8 @@ namespace SIC.Controllers
 
             var material = await materialRepository.Remove(id);
 
-            if(material == null){
+            if (material == null)
+            {
                 return BadRequest();
             }
 
@@ -187,7 +189,41 @@ namespace SIC.Controllers
                 fdto.name = mf.Finishing.name;
                 dto.finishes.Add(fdto);
             }
-            
+
+            return Ok(dto);
+        }
+
+        // PUT: api/Material/id/Finishing/idf
+        [HttpPut("{id}/Finishing/{idf}")]
+        public async Task<IActionResult> PutMaterialFinishing([FromRoute] int id, [FromRoute] int idf)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var material = await materialRepository.AddMaterialFinishing(id, idf);
+
+            if (material == null)
+            {
+                return BadRequest();
+            }
+
+            MaterialDTO dto = new MaterialDTO();
+            dto.name = material.name;
+            dto.description = material.description;
+            dto.MaterialId = material.MaterialId;
+            dto.finishes = new List<FinishingDTO>();
+
+            foreach (MaterialFinishing mf in material.MaterialFinishings)
+            {
+                FinishingDTO fdto = new FinishingDTO();
+                fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
+                fdto.name = mf.Finishing.name;
+                dto.finishes.Add(fdto);
+            }
+
             return Ok(dto);
         }
     }
