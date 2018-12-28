@@ -55,5 +55,6 @@ namespace SiC.Models
         public DbSet<SiC.Models.Finishing> Finishing { get; set; }
         public DbSet<SiC.Models.MaterialFinishing> MaterialFinishing { get; set; }
         public DbSet<SiC.Models.ProductMaterial> ProductMaterial { get; set; }
+        public DbSet<SiC.Models.Price> Price { get; set; }
     }
 }
