@@ -13,7 +13,7 @@ namespace SiC.DTOs
 
         public MeasureDTO Height { get; set; }
 
-        public virtual MeasureDTO Depth { get; set; }
+        public MeasureDTO Depth { get; set; }
 
         public DimensionDTO()
         {

@@ -217,5 +217,27 @@ namespace SiC.Repository
             return product;
 
         }
+
+        internal async Task<Product> RemoveProductMaterial(int id, int idm)
+        {
+            var product = await context.Product.FindAsync(id);
+            var material = await context.Material.FindAsync(idm);
+            ProductMaterial pms = null;
+
+            if (product == null || material == null) return null;
+
+            foreach(ProductMaterial pm in product.ProductMaterials){
+                if(pm.MaterialId == idm){
+                    pms = pm;
+                }
+            }
+
+            if (pms == null) return null;
+
+            context.ProductMaterial.Remove(pms);
+            await context.SaveChangesAsync();
+
+            return product;
+        }
     }
 }

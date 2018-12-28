@@ -779,5 +779,74 @@ namespace SiC.Controllers
 
             return Ok(dto);
         }
+
+        // DELETE: api/Product/id/Material/idm
+        [HttpDelete("{id}/Material/{idm}")]
+        public async Task<IActionResult> DeleteProductMaterial([FromRoute] int id, [FromRoute] int idm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var product = await productRepository.RemoveProductMaterial(id, idm);
+
+            if (product == null)
+            {
+                return BadRequest();
+            }
+
+            ProductDTO dto = new ProductDTO();
+            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            dto.ProductId = product.ProductId;
+            dto.name = product.name;
+            dto.description = product.description;
+            dto.dimensions = new List<DimensionDTO>();
+            dto.materials = new List<MaterialDTO>();
+            foreach (ProductMaterial pm in product.ProductMaterials)
+            {
+                MaterialDTO mat_dto = new MaterialDTO();
+                mat_dto.name = pm.Material.name;
+                mat_dto.description = pm.Material.description;
+                mat_dto.MaterialId = pm.Material.MaterialId;
+                mat_dto.finishes = new List<FinishingDTO>();
+
+                foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
+                {
+                    FinishingDTO fdto = new FinishingDTO();
+                    fdto.finishingId = mf.Finishing.FinishingId;
+                    fdto.description = mf.Finishing.description;
+                    fdto.name = mf.Finishing.name;
+                    mat_dto.finishes.Add(fdto);
+                }
+
+                dto.materials.Add(mat_dto);
+            }
+
+            foreach (Dimension dimension in product.dimensions)
+            {
+                DimensionDTO dim_dto = new DimensionDTO();
+                dim_dto.Depth = new MeasureDTO();
+                dim_dto.Height = new MeasureDTO();
+                dim_dto.Width = new MeasureDTO();
+                dim_dto.DimensionId = dimension.DimensionId;
+                dim_dto.Depth.Id = dimension.Depth.MeasureId;
+                dim_dto.Depth.Value = dimension.Depth.Value;
+                dim_dto.Depth.ValueMax = dimension.Depth.ValueMax;
+                dim_dto.Depth.isDiscrete = dimension.Depth.isDiscrete;
+                dim_dto.Height.Id = dimension.Height.MeasureId;
+                dim_dto.Height.Value = dimension.Height.Value;
+                dim_dto.Height.ValueMax = dimension.Height.ValueMax;
+                dim_dto.Height.isDiscrete = dimension.Height.isDiscrete;
+                dim_dto.Width.Id = dimension.Width.MeasureId;
+                dim_dto.Width.Value = dimension.Width.Value;
+                dim_dto.Width.ValueMax = dimension.Width.ValueMax;
+                dim_dto.Width.isDiscrete = dimension.Width.isDiscrete;
+
+                dto.dimensions.Add(dim_dto);
+            }
+
+            return Ok(dto);
+        }
     }
 }
