@@ -123,12 +123,12 @@ namespace SiC.Controllers
 
             var catalog = await catalogRepository.Add(catalogDTO);
 
-            CatalogDTO catalogDTO = new CatalogDTO();
-            catalogDTO.CatalogId = catalog.CatalogId;
-            catalogDTO.CatalogDescription = catalog.CatalogDescription;
-            catalogDTO.Date = catalog.Date;
+            CatalogDTO catDTO = new CatalogDTO();
+            catDTO.CatalogId = catalog.CatalogId;
+            catDTO.CatalogDescription = catalog.CatalogDescription;
+            catDTO.Date = catalog.Date;
 
-            foreach (ProductDTO dto in catalog.products)
+            foreach (Product product in catalog.Products)
             {
                 ProductDTO dto = new ProductDTO();
                 CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
@@ -141,14 +141,14 @@ namespace SiC.Controllers
                     MaterialDTO mat_dto = new MaterialDTO();
                     mat_dto.name = pm.Material.name;
                     mat_dto.MaterialId = pm.Material.MaterialId;
-                    mat_dto.finishesDTO = new List<FinishingDTO>();
+                    mat_dto.finishes = new List<FinishingDTO>();
 
                     foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
                     {
                         FinishingDTO fdto = new FinishingDTO();
                         fdto.finishingId = mf.Finishing.FinishingId;
                         fdto.name = mf.Finishing.name;
-                        mat_dto.finishesDTO.Add(fdto);
+                        mat_dto.finishes.Add(fdto);
                     }
 
                     dto.materials.Add(mat_dto);
@@ -179,7 +179,7 @@ namespace SiC.Controllers
                 catalogDTO.products.Add(dto);
             }
 
-            return CreatedAtAction("PostCatalog", catalogDTO);
+            return CreatedAtAction("PostCatalog", catDTO);
         }
 
         // DELETE: api/Catalog/id
