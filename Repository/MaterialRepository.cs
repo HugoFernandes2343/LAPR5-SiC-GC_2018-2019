@@ -122,5 +122,27 @@ namespace SiC.Repository
             }
             return material;
         }
+
+        internal async Task<Material> RemoveMaterialFinishing(int id, int idf)
+        {
+            var finishing = await context.Product.FindAsync(id);
+            var material = await context.Material.FindAsync(idf);
+            MaterialFinishing mfs = null;
+
+            if (finishing == null || material == null) return null;
+
+            foreach(MaterialFinishing mf in material.MaterialFinishings){
+                if(mf.MaterialId == idf){
+                    mfs = mf;
+                }
+            }
+
+            if (mfs == null) return null;
+
+            context.MaterialFinishing.Remove(mfs);
+            await context.SaveChangesAsync();
+
+            return material;
+        }
     }
 }

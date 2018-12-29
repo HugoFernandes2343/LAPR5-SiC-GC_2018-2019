@@ -226,5 +226,39 @@ namespace SIC.Controllers
 
             return Ok(dto);
         }
+
+        // DELETE: api/Material/id/Finishing/idf
+        [HttpDelete("{id}/Finishing/{idf}")]
+        public async Task<IActionResult> DeleteMaterialFinishing([FromRoute] int id, [FromRoute] int idf)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var material = await materialRepository.RemoveMaterialFinishing(id, idf);
+
+            if (material == null)
+            {
+                return BadRequest();
+            }
+
+            MaterialDTO dto = new MaterialDTO();
+            dto.name = material.name;
+            dto.description = material.description;
+            dto.MaterialId = material.MaterialId;
+            dto.finishes = new List<FinishingDTO>();
+
+            foreach (MaterialFinishing mf in material.MaterialFinishings)
+            {
+                FinishingDTO fdto = new FinishingDTO();
+                fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
+                fdto.name = mf.Finishing.name;
+                dto.finishes.Add(fdto);
+            }
+
+            return Ok(dto);
+        }
     }
 }

@@ -23,8 +23,7 @@ namespace SiC.Repository
             List<Dimension> dims = new List<Dimension>();
             List<Material> mats = new List<Material>();
 
-            string catName = dto.category.name.Split(";").Last();
-            var category = context.Category.SingleOrDefault(c => c.name == catName);
+            var category = await context.Category.FindAsync(dto.category.CategoryId);
 
             if (category == null) return null;
 
