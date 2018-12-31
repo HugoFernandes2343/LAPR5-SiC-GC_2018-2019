@@ -18,8 +18,7 @@ namespace SiC.Repository
         }
         public async Task<Price> Add(PriceDTO dto)
         {
-            
-            if(dto.price == null || dto.price < 0.0){
+            if(dto.price < 0.0){
                 return null;
             }
             string designation = dto.designation;
