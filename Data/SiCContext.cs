@@ -42,7 +42,6 @@ namespace SiC.Models
                         .HasOne(mf => mf.Finishing)
                         .WithMany(f => f.MaterialFinishings)
                         .HasForeignKey(mf => mf.FinishingId);
-                        
         }
         public DbSet<SiC.Models.Product> Product { get; set; }
         public DbSet<SiC.Models.Material> Material { get; set; }
@@ -56,5 +55,8 @@ namespace SiC.Models
         public DbSet<SiC.Models.MaterialFinishing> MaterialFinishing { get; set; }
         public DbSet<SiC.Models.ProductMaterial> ProductMaterial { get; set; }
         public DbSet<SiC.Models.Price> Price { get; set; }
+        public DbSet<SiC.Models.Factory> Factory { get; set; }
+        public DbSet<SiC.Models.City> City { get; set; }
+
     }
 }

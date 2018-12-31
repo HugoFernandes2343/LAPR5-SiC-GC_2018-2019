@@ -80,6 +80,44 @@ namespace SiC
 
                 context.ProductMaterial.Add(PM);
 
+                City c = new City("Aveiro", 40.641190, -8.653620);
+                context.City.Add(c);
+                City c1 = new City("Beja", 38.015621, -7.865230);
+                context.City.Add(c1);
+                City c2 = new City("Braga", 41.545448, -8.426507);
+                context.City.Add(c2);
+                City c3 = new City("Bragança", 41.806114, -6.756738);
+                context.City.Add(c3);
+                City c4 = new City("Castelo Branco", 39.819714, -7.496466);
+                context.City.Add(c4);
+                City c5 = new City("Coimbra", 40.203316, -8.410257);
+                context.City.Add(c5);
+                City c6 = new City("Évora", 38.571430, -7.913502);
+                context.City.Add(c6);
+                City c7 = new City("Faro", 37.015362, -7.935110);
+                context.City.Add(c7);
+                City c8 = new City("Guarda", 40.537128, -7.267850);
+                context.City.Add(c8);
+                City c9 = new City("Leiria", 39.749535, -8.807683);
+                context.City.Add(c9);
+                City c10 = new City("Lisboa", 38.722252, -9.139337);
+                context.City.Add(c10);
+                City c11 = new City("Portalegre", 39.296707, -7.428476);
+                context.City.Add(c11);
+                City c12 = new City("Porto", 41.157944, -8.629105);
+                context.City.Add(c12);
+                City c13 = new City("Santarém", 39.236179, -8.687080);
+                context.City.Add(c13);
+                City c14 = new City("Setúbal", 38.525406, -8.894100);
+                context.City.Add(c14);
+                City c15 = new City("Viana do Castelo", 41.691807, -8.834451);
+                context.City.Add(c15);
+                City c16 = new City("Vila Real", 41.295898, -7.746350);
+                context.City.Add(c16);
+                City c17 = new City("Vila Real", 41.295898, -7.746350);
+                context.City.Add(c17);
+
+
                 context.SaveChanges();
             }
         }
