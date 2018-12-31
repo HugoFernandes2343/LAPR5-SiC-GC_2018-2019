@@ -40,7 +40,6 @@ namespace SiC
                 opt.AddPolicy("CORS",
                 b => b.WithOrigins("https://lapr5-ui.herokuapp.com")
                 .WithOrigins("https://lapr5-enc.herokuapp.com")
-                .WithOrigins("http://localhost:4200")
                 .AllowAnyHeader()
                 .AllowAnyMethod());
             }
