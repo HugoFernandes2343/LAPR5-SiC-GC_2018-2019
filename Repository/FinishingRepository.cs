@@ -23,6 +23,7 @@ namespace SiC.Repository
             Finishing finishing = new Finishing();
             finishing.name = dto.name;
             finishing.description = dto.description;
+            finishing.Prices = new List<Price>();
             context.Finishing.Add(finishing);
             await context.SaveChangesAsync();
 
@@ -72,6 +73,11 @@ namespace SiC.Repository
             foreach (MaterialFinishing mf in finishing.MaterialFinishings)
             {
                 context.MaterialFinishing.Remove(mf);
+            }
+
+            foreach (Price pr in finishing.Prices)
+            {
+                context.Price.Remove(pr);
             }
 
             context.Finishing.Remove(finishing);

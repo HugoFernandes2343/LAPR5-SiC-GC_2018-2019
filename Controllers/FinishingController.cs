@@ -32,6 +32,16 @@ namespace SiC.Controllers
                 dto.finishingId = finishing.FinishingId;
                 dto.description = finishing.description;
                 dto.name = finishing.name;
+                dto.prices =  new List<PriceDTO>();
+
+                foreach (Price pr in finishing.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    dto.prices.Add(prdto);
+                }
+
                 dtos.Add(dto);
             }
             return dtos;
@@ -57,6 +67,15 @@ namespace SiC.Controllers
             dto.finishingId = finishing.FinishingId;
             dto.description = finishing.description;
             dto.name = finishing.name;
+            dto.prices = new List<PriceDTO>();
+
+            foreach (Price pr in finishing.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
 
             return Ok(dto);
         }
@@ -85,6 +104,15 @@ namespace SiC.Controllers
             dto.finishingId = finishing.FinishingId;
             dto.description = finishing.description;
             dto.name = finishing.name;
+            dto.prices = new List<PriceDTO>();
+
+            foreach (Price pr in finishing.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
 
             return Ok(dto);
         }
@@ -108,6 +136,15 @@ namespace SiC.Controllers
             dto.finishingId = finishing.FinishingId;
             dto.description = finishing.description;
             dto.name = finishing.name;
+            dto.prices = new List<PriceDTO>();
+
+            foreach (Price pr in finishing.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
 
             return CreatedAtAction("GetFinishing", dto);
         }
@@ -131,6 +168,15 @@ namespace SiC.Controllers
             dto.finishingId = finishing.FinishingId;
             dto.description = finishing.description;
             dto.name = finishing.name;
+            dto.prices = new List<PriceDTO>();
+
+            foreach (Price pr in finishing.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
 
             return Ok(dto);
         }

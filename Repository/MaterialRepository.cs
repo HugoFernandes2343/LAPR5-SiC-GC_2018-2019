@@ -25,6 +25,7 @@ namespace SiC.Repository
             material.name = dto.name;
             material.MaterialFinishings = new List<MaterialFinishing>();
             material.description = dto.description;
+            material.Prices = new List<Price>();
             context.Material.Add(material);
             
             await context.SaveChangesAsync();
@@ -81,6 +82,11 @@ namespace SiC.Repository
             foreach (ProductMaterial pm in material.ProductMaterials)
             {
                 context.ProductMaterial.Remove(pm);
+            }
+
+            foreach (Price pr in material.Prices)
+            {
+                context.Price.Remove(pr);
             }
 
             context.Material.Remove(material);

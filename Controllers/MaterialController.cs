@@ -36,6 +36,7 @@ namespace SIC.Controllers
                 dto.description = material.description;
                 dto.MaterialId = material.MaterialId;
                 dto.finishes = new List<FinishingDTO>();
+                dto.prices =  new List<PriceDTO>();
 
                 foreach (MaterialFinishing mf in material.MaterialFinishings)
                 {
@@ -43,8 +44,27 @@ namespace SIC.Controllers
                     fdto.finishingId = mf.Finishing.FinishingId;
                     fdto.description = mf.Finishing.description;
                     fdto.name = mf.Finishing.name;
+                    fdto.prices = new List<PriceDTO>();
+
+                    foreach (Price pr in mf.Finishing.Prices){
+                        PriceDTO prdto = new PriceDTO();
+                        prdto.designation = prdto.designation;
+                        prdto.price = prdto.price;
+                        prdto.date = prdto.date;
+                        fdto.prices.Add(prdto);
+                    }
+
                     dto.finishes.Add(fdto);
                 }
+
+                foreach (Price pr in material.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    dto.prices.Add(prdto);
+                }
+
 
                 dtos.Add(dto);
             }
@@ -73,6 +93,7 @@ namespace SIC.Controllers
             dto.description = material.description;
             dto.MaterialId = material.MaterialId;
             dto.finishes = new List<FinishingDTO>();
+            dto.prices =  new List<PriceDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
@@ -80,8 +101,27 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                    foreach (Price pr in mf.Finishing.Prices){
+                        PriceDTO prdto = new PriceDTO();
+                        prdto.designation = prdto.designation;
+                        prdto.price = prdto.price;
+                        prdto.date = prdto.date;
+                        fdto.prices.Add(prdto);
+                    }
+
                 dto.finishes.Add(fdto);
             }
+
+            foreach (Price pr in material.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
+
 
             return Ok(dto);
         }
@@ -119,7 +159,25 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                    foreach (Price pr in mf.Finishing.Prices){
+                        PriceDTO prdto = new PriceDTO();
+                        prdto.designation = prdto.designation;
+                        prdto.price = prdto.price;
+                        prdto.date = prdto.date;
+                        fdto.prices.Add(prdto);
+                    }
+
                 dto.finishes.Add(fdto);
+            }
+
+            foreach (Price pr in material.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    dto.prices.Add(prdto);
             }
 
             return Ok(dto);
@@ -146,6 +204,7 @@ namespace SIC.Controllers
             dto.description = material.description;
             dto.MaterialId = material.MaterialId;
             dto.finishes = new List<FinishingDTO>();
+            dto.prices = new List<PriceDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
@@ -153,7 +212,25 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                    foreach (Price pr in mf.Finishing.Prices){
+                        PriceDTO prdto = new PriceDTO();
+                        prdto.designation = prdto.designation;
+                        prdto.price = prdto.price;
+                        prdto.date = prdto.date;
+                        fdto.prices.Add(prdto);
+                    }
+
                 dto.finishes.Add(fdto);
+            }
+
+            foreach (Price pr in material.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
             }
 
             return CreatedAtAction("GetMaterial", dto);
@@ -180,6 +257,7 @@ namespace SIC.Controllers
             dto.description = material.description;
             dto.MaterialId = material.MaterialId;
             dto.finishes = new List<FinishingDTO>();
+            dto.prices = new List<PriceDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
@@ -187,7 +265,25 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                foreach (Price pr in mf.Finishing.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    fdto.prices.Add(prdto);
+                }
+
                 dto.finishes.Add(fdto);
+            }
+
+            foreach (Price pr in material.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
             }
 
             return Ok(dto);
@@ -214,6 +310,7 @@ namespace SIC.Controllers
             dto.description = material.description;
             dto.MaterialId = material.MaterialId;
             dto.finishes = new List<FinishingDTO>();
+            dto.prices = new List<PriceDTO>();
 
             foreach (MaterialFinishing mf in material.MaterialFinishings)
             {
@@ -221,7 +318,25 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                foreach (Price pr in mf.Finishing.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    fdto.prices.Add(prdto);
+                }
+
                 dto.finishes.Add(fdto);
+            }
+
+            foreach (Price pr in material.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
             }
 
             return Ok(dto);
@@ -255,6 +370,15 @@ namespace SIC.Controllers
                 fdto.finishingId = mf.Finishing.FinishingId;
                 fdto.description = mf.Finishing.description;
                 fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                foreach (Price pr in mf.Finishing.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    fdto.prices.Add(prdto);
+                }
                 dto.finishes.Add(fdto);
             }
 
