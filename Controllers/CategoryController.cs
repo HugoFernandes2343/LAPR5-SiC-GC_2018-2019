@@ -26,13 +26,14 @@ namespace SIC.Controllers
         [HttpGet]
         public IEnumerable<CategoryDTO> GetCategory()
         {
-            
+
             List<CategoryDTO> dtos = new List<CategoryDTO>();
-            foreach(Category category in categoryRepository.FindAll()){
-                CategoryDTO dto = new CategoryDTO(category.name, category);
+            foreach (Category category in categoryRepository.FindAll())
+            {
+                CategoryDTO dto = new CategoryDTO(category);
                 dtos.Add(dto);
             }
-            
+
             return dtos;
         }
 
@@ -52,7 +53,7 @@ namespace SIC.Controllers
                 return NotFound();
             }
 
-            return Ok(new CategoryDTO(category.name,category));
+            return Ok(new CategoryDTO(category));
         }
 
         // PUT: api/Category/id
@@ -69,14 +70,14 @@ namespace SIC.Controllers
                 return BadRequest();
             }
 
-           var category = await categoryRepository.FindById(id);
+            var category = await categoryRepository.Edit(id, categoryDTO);
 
-           if (category == null)
+            if (category == null)
             {
                 return BadRequest();
             }
 
-            return Ok(new CategoryDTO(category.name,category));
+            return Ok(new CategoryDTO(category));
         }
 
         // POST: api/Category
@@ -95,7 +96,7 @@ namespace SIC.Controllers
                 return BadRequest();
             }
 
-            return CreatedAtAction("GetCategory", new CategoryDTO(category.name,category));
+            return CreatedAtAction("GetCategory", new CategoryDTO(category));
         }
 
         // DELETE: api/Category/5
@@ -108,13 +109,13 @@ namespace SIC.Controllers
             }
 
             var category = await categoryRepository.Remove(id);
-            
+
             if (category == null)
             {
                 return NotFound();
             }
 
-            return Ok(new CategoryDTO(category.name,category));
+            return Ok(new CategoryDTO(category));
         }
 
     }

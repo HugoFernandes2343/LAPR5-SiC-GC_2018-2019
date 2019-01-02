@@ -124,7 +124,7 @@ namespace SiC.Controllers
             foreach (Product product in collection.products)
             {
                 ProductDTO dto = new ProductDTO();
-                CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
                 dto.dimensions = new List<DimensionDTO>();

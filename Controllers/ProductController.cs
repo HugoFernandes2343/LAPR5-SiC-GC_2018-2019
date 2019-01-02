@@ -30,7 +30,7 @@ namespace SiC.Controllers
             foreach (Product product in productRepository.FindAll())
             {
                 ProductDTO dto = new ProductDTO();
-                CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
                 dto.description = product.description;
@@ -100,7 +100,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -174,7 +174,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -243,7 +243,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -312,7 +312,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -385,7 +385,7 @@ namespace SiC.Controllers
             foreach (Product product in products)
             {
                 ProductDTO dto = new ProductDTO();
-                CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
                 dto.description = product.description;
@@ -462,7 +462,7 @@ namespace SiC.Controllers
             foreach (Product product in products)
             {
                 ProductDTO dto = new ProductDTO();
-                CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
                 dto.ProductId = product.ProductId;
                 dto.name = product.name;
                 dto.description = product.description;
@@ -534,7 +534,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -659,7 +659,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -728,7 +728,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
@@ -797,7 +797,7 @@ namespace SiC.Controllers
             }
 
             ProductDTO dto = new ProductDTO();
-            CategoryDTO cat_dto = new CategoryDTO(product.category.name, product.category);
+            CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
             dto.description = product.description;
