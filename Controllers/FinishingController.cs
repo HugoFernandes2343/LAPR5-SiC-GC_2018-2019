@@ -180,5 +180,37 @@ namespace SiC.Controllers
 
             return Ok(dto);
         }
+
+        // PUT: api/Finishing/id/Price/idd
+        [HttpPut("{id}/Price/{idd}")]
+        public async Task<IActionResult> PutFinishingPrice([FromRoute] int id, [FromRoute] int idd)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var finishing = await finishingRepository.AddPrice(id, idd);
+
+            if (finishing == null)
+            {
+                return BadRequest();
+            }
+
+            FinishingDTO dto = new FinishingDTO();
+            dto.finishingId = finishing.FinishingId;
+            dto.description = finishing.description;
+            dto.name = finishing.name;
+            dto.prices = new List<PriceDTO>();
+
+            foreach (Price pr in finishing.Prices){
+                PriceDTO prdto = new PriceDTO();
+                prdto.designation = prdto.designation;
+                prdto.price = prdto.price;
+                prdto.date = prdto.date;
+                dto.prices.Add(prdto);
+            }
+            return Ok(dto);
+        }
     }
 }

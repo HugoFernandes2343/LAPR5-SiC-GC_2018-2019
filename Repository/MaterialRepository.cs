@@ -150,5 +150,31 @@ namespace SiC.Repository
 
             return material;
         }
+
+
+        internal async Task<Material> AddPrice(int id, int idd)
+        {
+            var material = await context.Material.FindAsync(id);
+            var price = await context.Price.FindAsync(idd);
+
+            if (material == null || price == null) return null;
+
+            if (material.Prices.Contains(price)) return null;
+
+            material.Prices.Add(price);
+
+            context.Entry(material).State = EntityState.Modified;
+
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return null;
+            }
+            return material;
+
+        }
     }
 }

@@ -384,5 +384,47 @@ namespace SIC.Controllers
 
             return Ok(dto);
         }
+
+        // PUT: api/Material/id/Price/idd
+        [HttpPut("{id}/Price/{idd}")]
+        public async Task<IActionResult> PutMaterialPrice([FromRoute] int id, [FromRoute] int idd)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var material = await materialRepository.AddPrice(id, idd);
+
+            if (material == null)
+            {
+                return BadRequest();
+            }
+
+            MaterialDTO dto = new MaterialDTO();
+            dto.name = material.name;
+            dto.description = material.description;
+            dto.MaterialId = material.MaterialId;
+            dto.finishes = new List<FinishingDTO>();
+
+            foreach (MaterialFinishing mf in material.MaterialFinishings)
+            {
+                FinishingDTO fdto = new FinishingDTO();
+                fdto.finishingId = mf.Finishing.FinishingId;
+                fdto.description = mf.Finishing.description;
+                fdto.name = mf.Finishing.name;
+                fdto.prices = new List<PriceDTO>();
+
+                foreach (Price pr in mf.Finishing.Prices){
+                    PriceDTO prdto = new PriceDTO();
+                    prdto.designation = prdto.designation;
+                    prdto.price = prdto.price;
+                    prdto.date = prdto.date;
+                    fdto.prices.Add(prdto);
+                }
+                dto.finishes.Add(fdto);
+            }
+            return Ok(dto);
+        }
     }
 }
