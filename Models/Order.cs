@@ -20,7 +20,7 @@ namespace SiC.Models
 
         public double cost { get; set;}
 
-        public List<Product> orderItems { get; set; }
+        public virtual List<Product> orderItems { get; set; }
 
     }
 }
