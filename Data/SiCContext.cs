@@ -57,6 +57,7 @@ namespace SiC.Models
         public DbSet<SiC.Models.Price> Price { get; set; }
         public DbSet<SiC.Models.Factory> Factory { get; set; }
         public DbSet<SiC.Models.City> City { get; set; }
+        public DbSet<SiC.Models.Order> Order { get; set; }
 
     }
 }
