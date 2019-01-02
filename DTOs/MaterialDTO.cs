@@ -11,6 +11,8 @@ namespace SiC.DTOs
         public string description { get; set; }
         public List<FinishingDTO> finishes { get; set; }
 
+        public List<PriceDTO> prices { get; set; }
+
         public MaterialDTO()
         {
 
