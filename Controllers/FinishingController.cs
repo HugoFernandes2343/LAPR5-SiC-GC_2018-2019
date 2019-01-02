@@ -205,9 +205,9 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
-                prdto.designation = prdto.designation;
-                prdto.price = prdto.price;
-                prdto.date = prdto.date;
+                prdto.designation = pr.designation;
+                prdto.price = pr.price;
+                prdto.date = pr.date;
                 dto.prices.Add(prdto);
             }
             return Ok(dto);
