@@ -9,9 +9,9 @@ namespace SiC.DTOs
         public string description { get; set; }
 
 
-        public CategoryDTO(string name, Category category)
+        public CategoryDTO(Category category)
         {
-            this.name = convertToTaxonomy(name, category);
+            this.name = convertToTaxonomy(category.name, category);
             this.description = category.description;
             this.CategoryId = category.CategoryId;
         }
@@ -40,6 +40,7 @@ namespace SiC.DTOs
                 Category cat1 = cat;
                 cat = new Category(names[i], cat);
             }
+            cat.description = this.description;
             return cat;
         }
     }

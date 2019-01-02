@@ -21,7 +21,7 @@ namespace SiC.Repository
             if (context.Product.Any(p => p.name == dto.name)) return null;
 
             List<Dimension> dims = new List<Dimension>();
-            List<Material> mats = new List<Material>();
+            List<ProductMaterial> pm = new List<ProductMaterial>();
 
             var category = await context.Category.FindAsync(dto.category.CategoryId);
 
@@ -32,6 +32,7 @@ namespace SiC.Repository
             product.description = dto.description;
             product.category = category;
             product.dimensions = dims;
+            product.ProductMaterials = pm;
 
             context.Product.Add(product);
             await context.SaveChangesAsync();

@@ -43,9 +43,10 @@ namespace SiC.Repository
 
             string name = dto.name.Split(";").Last();
 
-            if (context.Category.Any(c => c.name == name)) return null;
+            if (context.Category.Any(c => c.name == name && c.CategoryId != id)) return null;
 
             category.name = name;
+            category.description = dto.description;
 
             context.Entry(category).State = EntityState.Modified;
             try
