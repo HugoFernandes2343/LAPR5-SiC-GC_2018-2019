@@ -32,10 +32,11 @@ namespace SiC.Controllers
             foreach (Price price in priceRepository.FindAll())
             {
                 PriceDTO dto = new PriceDTO();
+                dto.PriceId = price.PriceId;
                 dto.designation = price.designation;
                 dto.price = price.price;
                 dto.date = price.date;
-                
+
                 dtos.Add(dto);
             }
 
@@ -59,10 +60,11 @@ namespace SiC.Controllers
             }
 
             PriceDTO dto = new PriceDTO();
+            dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
             dto.date = price.date;
-            
+
             return Ok(dto);
         }
 
@@ -88,10 +90,11 @@ namespace SiC.Controllers
             }
 
             PriceDTO dto = new PriceDTO();
+            dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
             dto.date = price.date;
-            
+
             return Ok(dto);
         }
 
@@ -112,6 +115,7 @@ namespace SiC.Controllers
             }
 
             PriceDTO dto = new PriceDTO();
+            dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
             dto.date = price.date;
@@ -136,6 +140,7 @@ namespace SiC.Controllers
             }
 
             PriceDTO dto = new PriceDTO();
+            dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
             dto.date = price.date;

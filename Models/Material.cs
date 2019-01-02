@@ -16,5 +16,7 @@ namespace SiC.Models
 
         public virtual ICollection<MaterialFinishing> MaterialFinishings { get; set; }
 
+        public virtual ICollection<Price> Prices { get; set; }
+
     }
 }
