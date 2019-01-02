@@ -1,1 +1,4 @@
 obj/
+.idea/
+.vs/
+.vscode/
