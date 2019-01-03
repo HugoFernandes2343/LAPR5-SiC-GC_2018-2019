@@ -81,7 +81,7 @@ namespace SiC.Repository
             return catalog;
         }
 
-        internal async Task<Catalog> AddCatalogProduct(int id, int idp)
+        public async Task<Catalog> AddCatalogProduct(int id, int idp)
         {
             
             var catalog = await context.Catalog.FindAsync(id);
@@ -115,7 +115,7 @@ namespace SiC.Repository
             return catalog;
         }
 
-        internal async Task<Catalog> RemoveCatalogProduct(int id, int idp)
+        public async Task<Catalog> RemoveCatalogProduct(int id, int idp)
         {
             var catalog = await context.Catalog.FindAsync(id);
             var product = await context.Product.FindAsync(idp);
