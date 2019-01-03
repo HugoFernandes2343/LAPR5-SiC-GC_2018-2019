@@ -63,6 +63,16 @@ namespace SiC.Repository
             return price;
         }
 
+        public async Task<List<Price>> FindByEntity(string name)
+        {
+            List<Price> prices = new List<Price>();
+
+            var query = from p in context.Price where p.designation == name select p;
+            prices = query.ToList();
+
+            return prices; 
+        }
+
         public IEnumerable<Price> FindAll()
         {
             return context.Price;

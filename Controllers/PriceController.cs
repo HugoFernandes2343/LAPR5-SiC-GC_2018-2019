@@ -43,6 +43,29 @@ namespace SiC.Controllers
             return dtos;
         }
 
+        // GET: api/Price/Search/{name}
+        [HttpGet("Search/{name}")]
+        public async Task<IActionResult> GetPriceByEntity([FromRoute] string name)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            List<PriceDTO> dtos = new List<PriceDTO>();
+            var prices = await priceRepository.FindByEntity(name);
+            foreach (Price price in prices)
+            {
+                PriceDTO dto = new PriceDTO();
+                dto.PriceId = price.PriceId;
+                dto.designation = price.designation;
+                dto.price = price.price;
+                dto.date = price.date;
+                dtos.Add(dto);
+            }
+            return Ok(dtos);
+        }
+
         // GET: api/Price/id
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPrice([FromRoute] int id)
