@@ -35,6 +35,7 @@ namespace SiC.Controllers
                 dto.Date = catalog.Date;
                 dto.CatalogDescription = catalog.CatalogDescription;
                 dto.CatalogName = catalog.CatalogName;
+                dto.products = new List<ProductDTO>();
                 foreach (CatalogProduct cp in catalog.CatalogProducts)
                 {
                     ProductDTO pdto = productToDTO(cp.Product);
@@ -68,7 +69,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
-
+            dto.products = new List<ProductDTO>();
             foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
                 ProductDTO pdto = productToDTO(cp.Product);
@@ -105,7 +106,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
-
+            dto.products = new List<ProductDTO>();
             foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
                 ProductDTO pdto = productToDTO(cp.Product);
@@ -132,7 +133,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
-
+            dto.products = new List<ProductDTO>();
             foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
                 ProductDTO pdto = productToDTO(cp.Product);
@@ -163,6 +164,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
+            dto.products = new List<ProductDTO>();
             return Ok(dto);
         }
 
@@ -221,7 +223,7 @@ namespace SiC.Controllers
         // PUT: api/Catalog/id/Product/idp
         //Adds a product to the catalog with the given id
         [HttpPut("{id}/Product/{idp}")]
-        public async Task<IActionResult> AddProduct([FromRoute] int id, [FromBody] int idp)
+        public async Task<IActionResult> AddProduct([FromRoute] int id, [FromRoute] int idp)
         {
             if (!ModelState.IsValid)
             {
@@ -240,7 +242,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
-
+            dto.products = new List<ProductDTO>();
             foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
                 ProductDTO pdto = productToDTO(cp.Product);
@@ -271,6 +273,7 @@ namespace SiC.Controllers
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
+            dto.products = new List<ProductDTO>();
             return Ok(dto);
         }
         
