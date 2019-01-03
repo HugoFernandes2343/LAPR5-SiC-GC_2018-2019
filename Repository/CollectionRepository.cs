@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SiC.DTOs;
-using SiC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SiC.DTOs;
+using SiC.Models;
 
 namespace SiC.Repository
 {
-    public class CollectionRepository : Repository<Collection, CollectionDTO>
+    public class CollectionRepository : Repository<Collection,CollectionDTO>
     {
         private SiCContext context;
 
@@ -24,11 +24,12 @@ namespace SiC.Repository
             Collection collection = new Collection();
             collection.collectionName = dto.collectionName;
             collection.aestheticParameter = dto.aestheticParameter;
-            collection.products = new List<Product>(); /// TODO check with hugo if this is correct
+           // collection.products = new List<Product>(); /// TODO check with hugo if this is correct
+            
             context.Collection.Add(collection);
 
             await context.SaveChangesAsync();
-
+            
             return collection;
         }
 

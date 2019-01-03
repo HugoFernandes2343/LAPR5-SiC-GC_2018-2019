@@ -25,11 +25,66 @@ namespace SiC.Controllers
             List<CollectionDTO> dtos = new List<CollectionDTO>();
             foreach (Collection collec in collectionRepository.FindAll())
             {
-                CollectionDTO dto = new CollectionDTO();
-                dto.CollectionId = collec.CollectionId;
-                dto.collectionName = collec.collectionName;
-                dto.aestheticParameter = collec.aestheticParameter;
-                dtos.Add(dto);
+                CollectionDTO cdto = new CollectionDTO();
+                cdto.CollectionId = collec.CollectionId;
+                cdto.collectionName = collec.collectionName;
+                cdto.aestheticParameter = collec.aestheticParameter;
+                /*cdto.products = new List<ProductDTO>();
+
+
+                 foreach (Product product in collec.products) {
+                    ProductDTO dto = new ProductDTO();
+                    CategoryDTO cat_dto = new CategoryDTO(product.category);
+                    dto.ProductId = product.ProductId;
+                    dto.name = product.name;
+                    dto.dimensions = new List<DimensionDTO>();
+                    dto.materials = new List<MaterialDTO>();
+
+                 foreach (ProductMaterial pm in product.ProductMaterials){
+
+                        MaterialDTO mat_dto = new MaterialDTO();
+                        mat_dto.name = pm.Material.name;
+                        mat_dto.MaterialId = pm.Material.MaterialId;
+                        mat_dto.finishes = new List<FinishingDTO>();
+
+                        foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
+                        {
+                            FinishingDTO fdto = new FinishingDTO();
+                            fdto.finishingId = mf.Finishing.FinishingId;
+                            fdto.name = mf.Finishing.name;
+                            mat_dto.finishes.Add(fdto);
+                        }
+
+                        dto.materials.Add(mat_dto);
+                    }
+
+                    foreach (Dimension dimension in product.dimensions)
+                    {
+                        DimensionDTO dim_dto = new DimensionDTO();
+                        dim_dto.Depth = new MeasureDTO();
+                        dim_dto.Height = new MeasureDTO();
+                        dim_dto.Width = new MeasureDTO();
+                        dim_dto.DimensionId = dimension.DimensionId;
+                        dim_dto.Depth.Id = dimension.Depth.MeasureId;
+                        dim_dto.Depth.Value = dimension.Depth.Value;
+                        dim_dto.Depth.ValueMax = dimension.Depth.ValueMax;
+                        dim_dto.Depth.isDiscrete = dimension.Depth.isDiscrete;
+                        dim_dto.Height.Id = dimension.Height.MeasureId;
+                        dim_dto.Height.Value = dimension.Height.Value;
+                        dim_dto.Height.ValueMax = dimension.Height.ValueMax;
+                        dim_dto.Height.isDiscrete = dimension.Height.isDiscrete;
+                        dim_dto.Width.Id = dimension.Width.MeasureId;
+                        dim_dto.Width.Value = dimension.Width.Value;
+                        dim_dto.Width.ValueMax = dimension.Width.ValueMax;
+                        dim_dto.Width.isDiscrete = dimension.Width.isDiscrete;
+
+                        dto.dimensions.Add(dim_dto);
+                    }
+                    cdto.products.Add(dto);
+
+                    
+                  }*/
+                 dtos.Add(cdto);
             }
 
             return dtos;
@@ -51,27 +106,65 @@ namespace SiC.Controllers
                 return NotFound();
             }
 
-            CollectionDTO dto = new CollectionDTO();
-            dto.CollectionId = collection.CollectionId;
-            dto.collectionName = collection.collectionName;
-            dto.aestheticParameter = collection.aestheticParameter;
+            CollectionDTO cdto = new CollectionDTO();
+            cdto.CollectionId = collection.CollectionId;
+            cdto.collectionName = collection.collectionName;
+            cdto.aestheticParameter = collection.aestheticParameter;
+           /* cdto.products = new List<ProductDTO>();
 
-            foreach (Product prod in collection.products)
+             foreach (Product product in collection.products)
             {
-                ProductDTO prodDTO = new ProductDTO();
-                prodDTO.ProductId = prod.ProductId;
-                prodDTO.name = prod.name;
-                prodDTO.description = prod.description;
+                ProductDTO dto = new ProductDTO();
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
+                dto.ProductId = product.ProductId;
+                dto.name = product.name;
+                dto.dimensions = new List<DimensionDTO>();
+                dto.materials = new List<MaterialDTO>();
+                foreach (ProductMaterial pm in product.ProductMaterials)
+                {
+                    MaterialDTO mat_dto = new MaterialDTO();
+                    mat_dto.name = pm.Material.name;
+                    mat_dto.MaterialId = pm.Material.MaterialId;
+                    mat_dto.finishes = new List<FinishingDTO>();
 
-                CategoryDTO catDTO = new CategoryDTO();
-                catDTO.CategoryId = prod.category.CategoryId;
-                catDTO.name = prod.category.name;
-                catDTO.description = prod.category.description;
+                    foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
+                    {
+                        FinishingDTO fdto = new FinishingDTO();
+                        fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.name = mf.Finishing.name;
+                        mat_dto.finishes.Add(fdto);
+                    }
 
-                dto.products.Add(prodDTO);
-            }
+                    dto.materials.Add(mat_dto);
+                }
 
-            return Ok(dto);
+                foreach (Dimension dimension in product.dimensions)
+                {
+                    DimensionDTO dim_dto = new DimensionDTO();
+                    dim_dto.Depth = new MeasureDTO();
+                    dim_dto.Height = new MeasureDTO();
+                    dim_dto.Width = new MeasureDTO();
+                    dim_dto.DimensionId = dimension.DimensionId;
+                    dim_dto.Depth.Id = dimension.Depth.MeasureId;
+                    dim_dto.Depth.Value = dimension.Depth.Value;
+                    dim_dto.Depth.ValueMax = dimension.Depth.ValueMax;
+                    dim_dto.Depth.isDiscrete = dimension.Depth.isDiscrete;
+                    dim_dto.Height.Id = dimension.Height.MeasureId;
+                    dim_dto.Height.Value = dimension.Height.Value;
+                    dim_dto.Height.ValueMax = dimension.Height.ValueMax;
+                    dim_dto.Height.isDiscrete = dimension.Height.isDiscrete;
+                    dim_dto.Width.Id = dimension.Width.MeasureId;
+                    dim_dto.Width.Value = dimension.Width.Value;
+                    dim_dto.Width.ValueMax = dimension.Width.ValueMax;
+                    dim_dto.Width.isDiscrete = dimension.Width.isDiscrete;
+
+                    dto.dimensions.Add(dim_dto);
+                }
+                cdto.products.Add(dto);
+
+                }*/
+            return Ok(cdto);
+
         }
 
         // PUT: api/Collection/5
@@ -88,21 +181,73 @@ namespace SiC.Controllers
                 return BadRequest();
             }
 
-            var collection = await collectionRepository.FindById(id);
+            var collection = await collectionRepository.Edit(id,collectionDTO);
 
             if (collection == null)
             {
                 return BadRequest();
             }
 
-            CollectionDTO dto = new CollectionDTO();
-            dto.CollectionId = collection.CollectionId;
-            dto.collectionName = collection.collectionName;
-            dto.aestheticParameter = collection.aestheticParameter;
+            CollectionDTO cdto = new CollectionDTO();
+            cdto.CollectionId = collection.CollectionId;
+            cdto.collectionName = collection.collectionName;
+            cdto.aestheticParameter = collection.aestheticParameter;
+            /*cdto.products = new List<ProductDTO>();
 
+         foreach (Product product in collection.products)
+            {
+                ProductDTO dto = new ProductDTO();
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
+                dto.ProductId = product.ProductId;
+                dto.name = product.name;
+                dto.dimensions = new List<DimensionDTO>();
+                dto.materials = new List<MaterialDTO>();
+                foreach (ProductMaterial pm in product.ProductMaterials)
+                {
+                    MaterialDTO mat_dto = new MaterialDTO();
+                    mat_dto.name = pm.Material.name;
+                    mat_dto.MaterialId = pm.Material.MaterialId;
+                    mat_dto.finishes = new List<FinishingDTO>();
+
+                    foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
+                    {
+                        FinishingDTO fdto = new FinishingDTO();
+                        fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.name = mf.Finishing.name;
+                        mat_dto.finishes.Add(fdto);
+                    }
+
+                    dto.materials.Add(mat_dto);
+                }
+
+                foreach (Dimension dimension in product.dimensions)
+                {
+                    DimensionDTO dim_dto = new DimensionDTO();
+                    dim_dto.Depth = new MeasureDTO();
+                    dim_dto.Height = new MeasureDTO();
+                    dim_dto.Width = new MeasureDTO();
+                    dim_dto.DimensionId = dimension.DimensionId;
+                    dim_dto.Depth.Id = dimension.Depth.MeasureId;
+                    dim_dto.Depth.Value = dimension.Depth.Value;
+                    dim_dto.Depth.ValueMax = dimension.Depth.ValueMax;
+                    dim_dto.Depth.isDiscrete = dimension.Depth.isDiscrete;
+                    dim_dto.Height.Id = dimension.Height.MeasureId;
+                    dim_dto.Height.Value = dimension.Height.Value;
+                    dim_dto.Height.ValueMax = dimension.Height.ValueMax;
+                    dim_dto.Height.isDiscrete = dimension.Height.isDiscrete;
+                    dim_dto.Width.Id = dimension.Width.MeasureId;
+                    dim_dto.Width.Value = dimension.Width.Value;
+                    dim_dto.Width.ValueMax = dimension.Width.ValueMax;
+                    dim_dto.Width.isDiscrete = dimension.Width.isDiscrete;
+
+                    dto.dimensions.Add(dim_dto);
+                }
+                cdto.products.Add(dto);
+            }*/
+            
             ///TODO Atualizar os produtos, ver o controller de materiais para ver como faz com os finishings
 
-            return Ok(dto);
+            return Ok(cdto);
         }
 
         // POST: api/Collection
@@ -120,6 +265,7 @@ namespace SiC.Controllers
             colDTO.CollectionId = collection.CollectionId;
             colDTO.collectionName = collection.collectionName;
             colDTO.aestheticParameter = collection.aestheticParameter;
+           /* colDTO.products = new List<ProductDTO>();
 
             foreach (Product product in collection.products)
             {
@@ -171,7 +317,7 @@ namespace SiC.Controllers
                 }
                 collectionDTO.products.Add(dto);
             }
-
+            */
             return CreatedAtAction("PostCollection", colDTO);
         }
 
@@ -190,27 +336,64 @@ namespace SiC.Controllers
                 return NotFound();
             }
 
-            CollectionDTO dto = new CollectionDTO();
-            dto.CollectionId = collection.CollectionId;
-            dto.collectionName = collection.collectionName;
-            dto.aestheticParameter = collection.aestheticParameter;
+            CollectionDTO cdto = new CollectionDTO();
+            cdto.CollectionId = collection.CollectionId;
+            cdto.collectionName = collection.collectionName;
+            cdto.aestheticParameter = collection.aestheticParameter;
+             /* cdto.products = new List<ProductDTO>();
 
-            foreach (Product prod in collection.products)
+            foreach (Product product in collection.products)
             {
-                ProductDTO prodDTO = new ProductDTO();
-                prodDTO.ProductId = prod.ProductId;
-                prodDTO.name = prod.name;
-                prodDTO.description = prod.description;
+                ProductDTO dto = new ProductDTO();
+                CategoryDTO cat_dto = new CategoryDTO(product.category);
+                dto.ProductId = product.ProductId;
+                dto.name = product.name;
+                dto.dimensions = new List<DimensionDTO>();
+                dto.materials = new List<MaterialDTO>();
+                foreach (ProductMaterial pm in product.ProductMaterials)
+                {
+                    MaterialDTO mat_dto = new MaterialDTO();
+                    mat_dto.name = pm.Material.name;
+                    mat_dto.MaterialId = pm.Material.MaterialId;
+                    mat_dto.finishes = new List<FinishingDTO>();
 
-                CategoryDTO catDTO = new CategoryDTO();
-                catDTO.CategoryId = prod.category.CategoryId;
-                catDTO.name = prod.category.name;
-                catDTO.description = prod.category.description;
+                    foreach (MaterialFinishing mf in pm.Material.MaterialFinishings)
+                    {
+                        FinishingDTO fdto = new FinishingDTO();
+                        fdto.finishingId = mf.Finishing.FinishingId;
+                        fdto.name = mf.Finishing.name;
+                        mat_dto.finishes.Add(fdto);
+                    }
 
-                dto.products.Add(prodDTO);
-            }
+                    dto.materials.Add(mat_dto);
+                }
 
-            return Ok(dto);
+                foreach (Dimension dimension in product.dimensions)
+                {
+                    DimensionDTO dim_dto = new DimensionDTO();
+                    dim_dto.Depth = new MeasureDTO();
+                    dim_dto.Height = new MeasureDTO();
+                    dim_dto.Width = new MeasureDTO();
+                    dim_dto.DimensionId = dimension.DimensionId;
+                    dim_dto.Depth.Id = dimension.Depth.MeasureId;
+                    dim_dto.Depth.Value = dimension.Depth.Value;
+                    dim_dto.Depth.ValueMax = dimension.Depth.ValueMax;
+                    dim_dto.Depth.isDiscrete = dimension.Depth.isDiscrete;
+                    dim_dto.Height.Id = dimension.Height.MeasureId;
+                    dim_dto.Height.Value = dimension.Height.Value;
+                    dim_dto.Height.ValueMax = dimension.Height.ValueMax;
+                    dim_dto.Height.isDiscrete = dimension.Height.isDiscrete;
+                    dim_dto.Width.Id = dimension.Width.MeasureId;
+                    dim_dto.Width.Value = dimension.Width.Value;
+                    dim_dto.Width.ValueMax = dimension.Width.ValueMax;
+                    dim_dto.Width.isDiscrete = dimension.Width.isDiscrete;
+
+                    dto.dimensions.Add(dim_dto);
+                }
+                cdto.products.Add(dto);
+            }*/
+
+            return Ok(cdto);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace SiC
             );
 
             //add Cors to this API DEVELOPMENT MODE
-            /* services.AddCors(opt =>
+            /*services.AddCors(opt =>
             {
                 opt.AddPolicy("CORS",
                 b => b.WithOrigins("http://localhost:4200")

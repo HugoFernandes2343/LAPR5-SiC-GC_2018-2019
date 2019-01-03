@@ -14,6 +14,7 @@ namespace SiC.Models
         public virtual List<Dimension> dimensions { get; set; }
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
         public virtual Category category { get; set; }
+        public virtual ICollection<CollectionProduct> CollectionProducts {get;set;}
 
     }
 }
