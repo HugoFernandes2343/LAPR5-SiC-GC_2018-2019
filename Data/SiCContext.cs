@@ -54,6 +54,16 @@ namespace SiC.Models
                         .WithMany(p => p.CollectionProducts)
                         .HasForeignKey(cp => cp.ProdutctId);
                 
+            modelBuilder.Entity<CatalogProduct>()
+                        .HasKey(cp => new { cp.CatalogId, cp.ProductId });
+            modelBuilder.Entity<CatalogProduct>()
+                        .HasOne(cp => cp.Catalog)
+                        .WithMany(c => c.CatalogProducts)
+                        .HasForeignKey(cp => cp.CatalogId);
+            modelBuilder.Entity<CatalogProduct>()
+                        .HasOne(cp => cp.Product)
+                        .WithMany(p => p.CatalogProducts)
+                        .HasForeignKey(cp => cp.ProductId);
         }
         public DbSet<SiC.Models.Product> Product { get; set; }
         public DbSet<SiC.Models.Material> Material { get; set; }
@@ -66,6 +76,7 @@ namespace SiC.Models
         public DbSet<SiC.Models.Finishing> Finishing { get; set; }
         public DbSet<SiC.Models.MaterialFinishing> MaterialFinishing { get; set; }
         public DbSet<SiC.Models.ProductMaterial> ProductMaterial { get; set; }
+        public DbSet<SiC.Models.CatalogProduct> CatalogProduct { get; set; }
         public DbSet<SiC.Models.Price> Price { get; set; }
         public DbSet<SiC.Models.Factory> Factory { get; set; }
         public DbSet<SiC.Models.City> City { get; set; }

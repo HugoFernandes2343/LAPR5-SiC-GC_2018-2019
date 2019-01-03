@@ -35,9 +35,9 @@ namespace SiC.Controllers
                 dto.Date = catalog.Date;
                 dto.CatalogDescription = catalog.CatalogDescription;
                 dto.CatalogName = catalog.CatalogName;
-                foreach (Product product in catalog.Products)
+                foreach (CatalogProduct cp in catalog.CatalogProducts)
                 {
-                    ProductDTO pdto = productToDTO(product);
+                    ProductDTO pdto = productToDTO(cp.Product);
                     dto.products.Add(pdto);
                 }
                 dtos.Add(dto);
@@ -67,10 +67,11 @@ namespace SiC.Controllers
             dto.CatalogId = catalog.CatalogId;
             dto.Date = catalog.Date;
             dto.CatalogDescription = catalog.CatalogDescription;
+            dto.CatalogName = catalog.CatalogName;
 
-            foreach (Product product in catalog.Products)
+            foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
-                ProductDTO pdto = productToDTO(product);
+                ProductDTO pdto = productToDTO(cp.Product);
                 dto.products.Add(pdto);
             }
 
@@ -101,12 +102,13 @@ namespace SiC.Controllers
 
             CatalogDTO dto = new CatalogDTO();
             dto.CatalogId = catalog.CatalogId;
-            dto.CatalogDescription = catalog.CatalogDescription;
             dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.CatalogName = catalog.CatalogName;
 
-            foreach (Product product in catalog.Products)
+            foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
-                ProductDTO pdto = productToDTO(product);
+                ProductDTO pdto = productToDTO(cp.Product);
                 dto.products.Add(pdto);
             }
 
@@ -125,18 +127,19 @@ namespace SiC.Controllers
 
             var catalog = await catalogRepository.Add(catalogDTO);
 
-            CatalogDTO catDTO = new CatalogDTO();
-            catDTO.CatalogId = catalog.CatalogId;
-            catDTO.CatalogDescription = catalog.CatalogDescription;
-            catDTO.Date = catalog.Date;
+            CatalogDTO dto = new CatalogDTO();
+            dto.CatalogId = catalog.CatalogId;
+            dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.CatalogName = catalog.CatalogName;
 
-            foreach (Product product in catalog.Products)
+            foreach (CatalogProduct cp in catalog.CatalogProducts)
             {
-                ProductDTO dto = productToDTO(product);
-                catDTO.products.Add(dto);
+                ProductDTO pdto = productToDTO(cp.Product);
+                dto.products.Add(pdto);
             }
 
-            return CreatedAtAction("PostCatalog", catDTO);
+            return CreatedAtAction("PostCatalog", dto);
         }
 
         // DELETE: api/Catalog/id
@@ -214,5 +217,62 @@ namespace SiC.Controllers
 
             return dto;
         }
+
+        // PUT: api/Catalog/id/Product/idp
+        //Adds a product to the catalog with the given id
+        [HttpPut("{id}/Product/{idp}")]
+        public async Task<IActionResult> AddProduct([FromRoute] int id, [FromBody] int idp)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var catalog = await catalogRepository.AddCatalogProduct(id, idp);
+
+            if (catalog == null)
+            {
+                return BadRequest();
+            }
+
+            CatalogDTO dto = new CatalogDTO();
+            dto.CatalogId = catalog.CatalogId;
+            dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.CatalogName = catalog.CatalogName;
+
+            foreach (CatalogProduct cp in catalog.CatalogProducts)
+            {
+                ProductDTO pdto = productToDTO(cp.Product);
+                dto.products.Add(pdto);
+            }
+
+            return Ok(dto);
+        }
+
+        // DELETE: api/Catalog/id
+        // Deletes a catalog with the given id
+        [HttpDelete("{id}/Product/{idp}")]
+        public async Task<IActionResult> DeleteProduct([FromRoute] int id, [FromRoute] int idp)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var catalog = await catalogRepository.RemoveCatalogProduct(id, idp);
+            if (catalog == null)
+            {
+                return NotFound();
+            }
+
+            CatalogDTO dto = new CatalogDTO();
+            dto.CatalogId = catalog.CatalogId;
+            dto.Date = catalog.Date;
+            dto.CatalogDescription = catalog.CatalogDescription;
+            dto.CatalogName = catalog.CatalogName;
+            return Ok(dto);
+        }
+        
     }
 }

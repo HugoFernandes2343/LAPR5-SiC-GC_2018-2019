@@ -12,7 +12,7 @@ namespace SiC.Models
         public int CatalogId { get; set; }
         public string CatalogName {get; set;}
         public string CatalogDescription {get; set;}
-        public virtual List<Product> Products { get; set; }
+        public virtual ICollection<CatalogProduct> CatalogProducts { get; set; }
         
         public string Date;
 

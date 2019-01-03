@@ -92,6 +92,11 @@ namespace SiC.Repository
                 context.Dimension.Remove(dim);
             }
 
+            foreach (CatalogProduct cp in product.CatalogProducts)
+            {
+                context.CatalogProduct.Remove(cp);
+            }
+
             List<Restriction> res_elim = new List<Restriction>();
             var res_elim_query = from r in context.Restriction where r.combination.containingProduct.ProductId == id || r.combination.containedProduct.ProductId == id select r;
             res_elim = res_elim_query.ToList();
