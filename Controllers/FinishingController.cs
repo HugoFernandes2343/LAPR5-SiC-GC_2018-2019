@@ -36,11 +36,13 @@ namespace SiC.Controllers
 
                 foreach (Price pr in finishing.Prices){
                     PriceDTO prdto = new PriceDTO();
-                    prdto.designation = prdto.designation;
-                    prdto.price = prdto.price;
-                    prdto.date = prdto.date;
+                    prdto.PriceId = pr.PriceId;
+                    prdto.designation = pr.designation;
+                    prdto.price = pr.price;
+                    prdto.date = pr.date;
                     dto.prices.Add(prdto);
                 }
+
 
                 dtos.Add(dto);
             }
@@ -71,11 +73,13 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
-                prdto.designation = prdto.designation;
-                prdto.price = prdto.price;
-                prdto.date = prdto.date;
+                prdto.PriceId = pr.PriceId;
+                prdto.designation = pr.designation;
+                prdto.price = pr.price;
+                prdto.date = pr.date;
                 dto.prices.Add(prdto);
             }
+
 
             return Ok(dto);
         }
@@ -108,9 +112,10 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
-                prdto.designation = prdto.designation;
-                prdto.price = prdto.price;
-                prdto.date = prdto.date;
+                prdto.PriceId = pr.PriceId;
+                prdto.designation = pr.designation;
+                prdto.price = pr.price;
+                prdto.date = pr.date;
                 dto.prices.Add(prdto);
             }
 
@@ -140,9 +145,10 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
-                prdto.designation = prdto.designation;
-                prdto.price = prdto.price;
-                prdto.date = prdto.date;
+                prdto.PriceId = pr.PriceId;
+                prdto.designation = pr.designation;
+                prdto.price = pr.price;
+                prdto.date = pr.date;
                 dto.prices.Add(prdto);
             }
 
@@ -172,9 +178,10 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
-                prdto.designation = prdto.designation;
-                prdto.price = prdto.price;
-                prdto.date = prdto.date;
+                prdto.PriceId = pr.PriceId;
+                prdto.designation = pr.designation;
+                prdto.price = pr.price;
+                prdto.date = pr.date;
                 dto.prices.Add(prdto);
             }
 
@@ -205,6 +212,7 @@ namespace SiC.Controllers
 
             foreach (Price pr in finishing.Prices){
                 PriceDTO prdto = new PriceDTO();
+                prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
                 prdto.date = pr.date;
