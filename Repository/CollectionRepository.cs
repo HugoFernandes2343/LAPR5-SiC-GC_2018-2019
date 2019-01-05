@@ -23,7 +23,7 @@ namespace SiC.Repository
             Collection collection = new Collection();
             collection.collectionName = dto.collectionName;
             collection.aestheticParameter = dto.aestheticParameter;
-            // collection.products = new List<Product>(); /// TODO check with hugo if this is correct
+            collection.CollectionProducts = new List<CollectionProduct>();
 
             context.Collection.Add(collection);
 

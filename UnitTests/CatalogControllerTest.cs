@@ -142,7 +142,7 @@ namespace LAPR5_GC.UnitTests
             dto.CatalogId = 1;
 
             var result1 = await controller.PutCatalog(1000, dto);
-            Assert.IsType<BadRequestResult>(result);
+            Assert.IsType<BadRequestResult>(result1);
 
             //Should not update if there is a catalog with the updated name already
             dto.CatalogName = "Second_Test_Catalog";
