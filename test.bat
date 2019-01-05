@@ -32,6 +32,36 @@ echo ----------------------------------------------------TestDeleteProductSucces
 dotnet test --no-build --filter LAPR5_GC.UnitTests.CatalogControllerTest.TestDeleteProductSuccess >> test_results.txt 2>&1
 echo ----------------------------------------------------TestDeleteProductFail---------------------------------------------------->>test_results.txt
 dotnet test --no-build --filter LAPR5_GC.UnitTests.CatalogControllerTest.TestDeleteProductFail >> test_results.txt 2>&1
+
+echo ----------------------------------------------------TestGetCollectionsSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestGetCollectionsSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCollectionsFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestGetCollectionsFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCollectionSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestGetCollectionSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCollectionFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestGetCollectionFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutCollectionSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestPutCollectionSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutCollectionFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestPutCollectionFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostCollectionSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestPostCollectionSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostCollectionFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestPostCollectionFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteCollectionSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestDeleteCollectionSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteCollectionFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestDeleteCollectionFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestAddProductSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestAddProductSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestAddProductFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestAddProductFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteProductSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestDeleteProductSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteProductFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestDeleteProductFail >> test_results.txt 2>&1
+
 echo ----------------------------------------------------Total Compilation Time---------------------------------------------------->>test_results.txt
 
 set ENDTIME=%TIME%

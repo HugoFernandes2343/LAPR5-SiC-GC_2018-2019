@@ -121,6 +121,10 @@ namespace SiC.Controllers
 
             var collection = await collectionRepository.Add(collectionDTO);
 
+            if (collection == null){
+                return BadRequest();
+            }
+
             CollectionDTO colDTO = new CollectionDTO();
             colDTO.CollectionId = collection.CollectionId;
             colDTO.collectionName = collection.collectionName;
@@ -225,6 +229,7 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
