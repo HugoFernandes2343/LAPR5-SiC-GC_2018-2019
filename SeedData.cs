@@ -86,13 +86,13 @@ namespace SiC
                 context.City.Add(c1);
                 City c2 = new City("Braga", 41.545448, -8.426507);
                 context.City.Add(c2);
-                City c3 = new City("Bragança", 41.806114, -6.756738);
+                City c3 = new City("Braganca", 41.806114, -6.756738);
                 context.City.Add(c3);
                 City c4 = new City("Castelo Branco", 39.819714, -7.496466);
                 context.City.Add(c4);
                 City c5 = new City("Coimbra", 40.203316, -8.410257);
                 context.City.Add(c5);
-                City c6 = new City("Évora", 38.571430, -7.913502);
+                City c6 = new City("Evora", 38.571430, -7.913502);
                 context.City.Add(c6);
                 City c7 = new City("Faro", 37.015362, -7.935110);
                 context.City.Add(c7);
@@ -106,15 +106,15 @@ namespace SiC
                 context.City.Add(c11);
                 City c12 = new City("Porto", 41.157944, -8.629105);
                 context.City.Add(c12);
-                City c13 = new City("Santarém", 39.236179, -8.687080);
+                City c13 = new City("Santarem", 39.236179, -8.687080);
                 context.City.Add(c13);
-                City c14 = new City("Setúbal", 38.525406, -8.894100);
+                City c14 = new City("Setubal", 38.525406, -8.894100);
                 context.City.Add(c14);
                 City c15 = new City("Viana do Castelo", 41.691807, -8.834451);
                 context.City.Add(c15);
                 City c16 = new City("Vila Real", 41.295898, -7.746350);
                 context.City.Add(c16);
-                City c17 = new City("Vila Real", 41.295898, -7.746350);
+                City c17 = new City("Viseu", 40.656586, -7.912471);
                 context.City.Add(c17);
 
 
