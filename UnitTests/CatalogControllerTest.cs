@@ -95,8 +95,8 @@ namespace LAPR5_GC.UnitTests
         public async Task TestGetCatalogFail()
         {
             //Should not find
-            var result2 = await controller.GetCatalog(1000);
-            Assert.IsType<NotFoundResult>(result2);
+            var result = await controller.GetCatalog(1000);
+            Assert.IsType<NotFoundResult>(result);
         }
 
         [Fact]
@@ -148,7 +148,7 @@ namespace LAPR5_GC.UnitTests
             dto.CatalogName = "Second_Test_Catalog";
 
             var result2 = await controller.PutCatalog(1, dto);
-            Assert.IsType<BadRequestResult>(result);
+            Assert.IsType<BadRequestResult>(result2);
         }
 
         [Fact]
@@ -259,7 +259,7 @@ namespace LAPR5_GC.UnitTests
             //Should not update Catalog if the product is already in the list
             var result2 = await controller.AddProduct(1, 1);
             result2 = await controller.AddProduct(1, 1);
-            Assert.IsType<BadRequestResult>(result1);
+            Assert.IsType<BadRequestResult>(result2);
 
         }
 

@@ -1,7 +1,9 @@
+dotnet build
+del test_results.txt
+echo ----------------------------------------------------Tests---------------------------------------------------->>test_results.txt
 rem ******************  MAIN CODE SECTION
 set STARTTIME=%TIME%
     
-del test_results.txt
 echo ----------------------------------------------------TestGetCatalogsSuccess---------------------------------------------------->>test_results.txt
 dotnet test --no-build --filter LAPR5_GC.UnitTests.CatalogControllerTest.TestGetCatalogsSuccess >> test_results.txt 2>&1
 echo ----------------------------------------------------TestGetCatalogsFail---------------------------------------------------->>test_results.txt
