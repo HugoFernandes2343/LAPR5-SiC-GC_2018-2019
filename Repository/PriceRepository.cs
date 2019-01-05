@@ -23,7 +23,7 @@ namespace SiC.Repository
             }
             string designation = dto.designation;
             double price_value = dto.price;
-            DateTime date = dto.date;
+            DateTime date = DateTime.Parse(dto.date);
 
             Price price = new Price();
             price.designation = designation;
@@ -47,7 +47,7 @@ namespace SiC.Repository
 
             price.designation = dto.designation;
             price.price = dto.price;
-            price.date = dto.date;
+            price.date = DateTime.Parse(dto.date);
 
             context.Entry(price).State = EntityState.Modified;
 

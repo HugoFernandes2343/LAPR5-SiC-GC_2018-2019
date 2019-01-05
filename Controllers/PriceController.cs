@@ -35,7 +35,7 @@ namespace SiC.Controllers
                 dto.PriceId = price.PriceId;
                 dto.designation = price.designation;
                 dto.price = price.price;
-                dto.date = price.date;
+                dto.date = price.date.ToString("yyyy-MM-dd");
 
                 dtos.Add(dto);
             }
@@ -60,7 +60,7 @@ namespace SiC.Controllers
                 dto.PriceId = price.PriceId;
                 dto.designation = price.designation;
                 dto.price = price.price;
-                dto.date = price.date;
+                dto.date = price.date.ToString("yyyy-MM-dd");
                 dtos.Add(dto);
             }
             return Ok(dtos);
@@ -86,7 +86,7 @@ namespace SiC.Controllers
             dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
-            dto.date = price.date;
+            dto.date = price.date.ToString("yyyy-MM-dd");
 
             return Ok(dto);
         }
@@ -116,7 +116,7 @@ namespace SiC.Controllers
             dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
-            dto.date = price.date;
+            dto.date = price.date.ToString("yyyy-MM-dd");
 
             return Ok(dto);
         }
@@ -141,7 +141,7 @@ namespace SiC.Controllers
             dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
-            dto.date = price.date;
+            dto.date = price.date.ToString("yyyy-MM-dd");
 
             return CreatedAtAction("GetPrice", dto);
         }
@@ -166,7 +166,7 @@ namespace SiC.Controllers
             dto.PriceId = price.PriceId;
             dto.designation = price.designation;
             dto.price = price.price;
-            dto.date = price.date;
+            dto.date = price.date.ToString("yyyy-MM-dd");
 
 
             return Ok(dto);

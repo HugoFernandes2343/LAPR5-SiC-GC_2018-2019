@@ -39,7 +39,7 @@ namespace SiC.Controllers
                     prdto.PriceId = pr.PriceId;
                     prdto.designation = pr.designation;
                     prdto.price = pr.price;
-                    prdto.date = pr.date;
+                    prdto.date = pr.date.ToString("yyyy-MM-dd");
                     dto.prices.Add(prdto);
                 }
 
@@ -76,7 +76,7 @@ namespace SiC.Controllers
                 prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
-                prdto.date = pr.date;
+                prdto.date = pr.date.ToString("yyyy-MM-dd");
                 dto.prices.Add(prdto);
             }
 
@@ -115,7 +115,7 @@ namespace SiC.Controllers
                 prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
-                prdto.date = pr.date;
+                prdto.date = pr.date.ToString("yyyy-MM-dd");
                 dto.prices.Add(prdto);
             }
 
@@ -148,7 +148,7 @@ namespace SiC.Controllers
                 prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
-                prdto.date = pr.date;
+                prdto.date = pr.date.ToString("yyyy-MM-dd");
                 dto.prices.Add(prdto);
             }
 
@@ -181,7 +181,7 @@ namespace SiC.Controllers
                 prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
-                prdto.date = pr.date;
+                prdto.date = pr.date.ToString("yyyy-MM-dd");
                 dto.prices.Add(prdto);
             }
 
@@ -215,7 +215,7 @@ namespace SiC.Controllers
                 prdto.PriceId = pr.PriceId;
                 prdto.designation = pr.designation;
                 prdto.price = pr.price;
-                prdto.date = pr.date;
+                prdto.date = pr.date.ToString("yyyy-MM-dd");
                 dto.prices.Add(prdto);
             }
             return Ok(dto);
