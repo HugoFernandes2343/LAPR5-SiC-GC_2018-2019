@@ -128,6 +128,10 @@ namespace SiC.Controllers
 
             var catalog = await catalogRepository.Add(catalogDTO);
 
+            if(catalog == null){
+                return BadRequest();
+            }
+
             CatalogDTO dto = new CatalogDTO();
             dto.CatalogId = catalog.CatalogId;
             dto.Date = catalog.Date;
@@ -174,6 +178,7 @@ namespace SiC.Controllers
             CategoryDTO cat_dto = new CategoryDTO(product.category);
             dto.ProductId = product.ProductId;
             dto.name = product.name;
+            dto.description = product.description;
             dto.dimensions = new List<DimensionDTO>();
             dto.materials = new List<MaterialDTO>();
             foreach (ProductMaterial pm in product.ProductMaterials)
@@ -274,6 +279,11 @@ namespace SiC.Controllers
             dto.CatalogDescription = catalog.CatalogDescription;
             dto.CatalogName = catalog.CatalogName;
             dto.products = new List<ProductDTO>();
+            foreach (CatalogProduct cp in catalog.CatalogProducts)
+            {
+                ProductDTO pdto = productToDTO(cp.Product);
+                dto.products.Add(pdto);
+            }
             return Ok(dto);
         }
         

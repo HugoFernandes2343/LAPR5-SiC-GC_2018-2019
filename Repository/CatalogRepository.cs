@@ -19,6 +19,8 @@ namespace SiC.Repository
 
         public async Task<Catalog> Add(CatalogDTO dto)
         {
+            if(context.Catalog.Any(c => c.CatalogName == dto.CatalogName)) return null;
+
             Catalog catalog = new Catalog();
             catalog.CatalogName = dto.CatalogName;
             catalog.CatalogDescription = dto.CatalogDescription;
