@@ -108,6 +108,27 @@ dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestDelete
 echo ----------------------------------------------------TestDeleteCityFail---------------------------------------------------->>test_results.txt
 dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestDeleteCityFail >> test_results.txt 2>&1
 
+echo ----------------------------------------------------TestGetFactoriesSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestGetFactoriesSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetFactoriesFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestGetFactoriesFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetFactorySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestGetFactorySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetFactoryFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestGetFactoryFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutFactorySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestPutFactorySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutFactoryFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestPutFactoryFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostFactorySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestPostFactorySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostFactoryFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestPostFactoryFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteFactorySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestDeleteFactorySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteFactoryFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.FactoryControllerTest.TestDeleteFactoryFail >> test_results.txt 2>&1
+
 echo ----------------------------------------------------Total Compilation Time---------------------------------------------------->>test_results.txt
 
 set ENDTIME=%TIME%

@@ -94,6 +94,10 @@ namespace SiC.Controllers
 
             var f = await factoryRepository.Edit(id, factoryDTO);
 
+            if(f == null){
+                return BadRequest();
+            }
+
             FactoryDTO dto = new FactoryDTO();
             dto.FactoryId = f.FactoryId;
             dto.Description = f.Description;
