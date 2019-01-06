@@ -28,6 +28,11 @@ load_factories_url("https://localhost:5001/api/factory").
 %load_factories_url("https://lapr5-gc.azurewebsites.net/api/Factory").
 
 
+prepareTest:- delKB, consult('testes.pl').
+delKB:-
+    forall(factory(_,_,_), retract(factory(_,_,_))),
+    forall(city(_,_,_,_), retract(city(_,_,_,_))).
+
 
 %Ligar o server
 server_on:- loadCities, http_server(http_dispatch, [port(3500)]),!.
