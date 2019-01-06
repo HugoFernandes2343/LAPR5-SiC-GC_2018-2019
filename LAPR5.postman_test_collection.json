@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e146c139-ecc7-4f4b-bf94-8e26aa72e13b",
+		"_postman_id": "0b682b8f-1192-4f89-9845-6e6474c5cfcb",
 		"name": "LAPR5",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2747,6 +2747,482 @@
 				}
 			],
 			"description": "Tests regarding prices"
+		},
+		{
+			"name": "Prolog",
+			"item": [
+				{
+					"name": "1- GET List of Cities [Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a08f0f3e-b1d1-44b9-94d1-2a94cf6df785",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\r",
+									"        \"Aveiro\",\r",
+									"        \"Viseu\",\r",
+									"        \"Vila Real\",\r",
+									"        \"Setubal\",\r",
+									"        \"Santarem\",\r",
+									"        \"Porto\",\r",
+									"        \"Portalegre\",\r",
+									"        \"Lisboa\",\r",
+									"        \"Viana do Castelo\",\r",
+									"        \"Guarda\",\r",
+									"        \"Faro\",\r",
+									"        \"Evora\",\r",
+									"        \"Coimbra\",\r",
+									"        \"Castelo Branco\",\r",
+									"        \"Braganca\",\r",
+									"        \"Braga\",\r",
+									"        \"Beja\",\r",
+									"        \"Leiria\"\r",
+									"    );\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/list_cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"list_cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2- GET List of Factories [Fail]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d01e41f-562e-4534-902f-8c2cf752986d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.variables.get(\"variable_key\");    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"No Factories in KB\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/list_factories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"list_factories"
+							]
+						},
+						"description": "Prolog ainda não carregou as fábricas da base de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "3- GET Load Factories [Sucess]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a96d2b7e-78cb-4e70-9756-dfbfeb066f7a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Success\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/copy_factory_db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"copy_factory_db"
+							]
+						},
+						"description": "Carrega as fábricas da BD para a BC"
+					},
+					"response": []
+				},
+				{
+					"name": "4- GET List of factories [Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "23e4a406-04e5-4c8e-96fe-f12d43365187",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.variables.get(\"variable_key\");    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\r",
+									"        \"Porto\"\r",
+									"    );\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/list_factories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"list_factories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5- GET Closest factory [Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7c386ced-eb62-4aae-a36c-e3eb01dd1af4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.factoryID).to.eql(1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.city.name).to.eql(\"Porto\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/closest_factory?city=Braga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"closest_factory"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Braga"
+								}
+							]
+						},
+						"description": "Envia no GET o nome da cidade e recebe a fabrica mais proxima"
+					},
+					"response": []
+				},
+				{
+					"name": "6- GET Closest factory [Fail]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7c386ced-eb62-4aae-a36c-e3eb01dd1af4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"City does not exist!\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/closest_factory?city=Test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"closest_factory"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Test"
+								}
+							]
+						},
+						"description": "City does not exist."
+					},
+					"response": []
+				},
+				{
+					"name": "7- GET Best Path [Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd49e0de-7dcc-4762-9af4-f414928e5a0b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.variables.get(\"variable_key\");    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\r",
+									"        6,\r",
+									"        9,\r",
+									"        16,\r",
+									"        3,\r",
+									"        2,\r",
+									"        10,\r",
+									"        14,\r",
+									"        7,\r",
+									"        12,\r",
+									"        17,\r",
+									"        4,\r",
+									"        8,\r",
+									"        5,\r",
+									"        18,\r",
+									"        13,\r",
+									"        1,\r",
+									"        15,\r",
+									"        11,\r",
+									"        6\r",
+									"    );\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/shorter_path?city=Porto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"shorter_path"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Porto"
+								}
+							]
+						},
+						"description": "Envia nome da cidade da fabrica inicial e retorna uma lista de IDs das cidades"
+					},
+					"response": []
+				},
+				{
+					"name": "8- GET Best Path [Fail]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd49e0de-7dcc-4762-9af4-f414928e5a0b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.variables.get(\"variable_key\");    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\r",
+									"        \"City does not exist!\"\r",
+									"    );\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3500/shorter_path?city=Teste",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"shorter_path"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Teste"
+								}
+							]
+						},
+						"description": "City does not exist."
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
