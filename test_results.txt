@@ -1,6 +1,6 @@
 ----------------------------------------------------Tests----------------------------------------------------
 ----------------------------------------------------TestGetCatalogsSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -8,9 +8,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8309 Seconds
+Test execution time: 1,9599 Seconds
 ----------------------------------------------------TestGetCatalogsFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -18,9 +18,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8926 Seconds
+Test execution time: 1,8404 Seconds
 ----------------------------------------------------TestGetCatalogSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -28,9 +28,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 2,3147 Seconds
+Test execution time: 1,8636 Seconds
 ----------------------------------------------------TestGetCatalogFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -38,9 +38,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9480 Seconds
+Test execution time: 1,8374 Seconds
 ----------------------------------------------------TestPutCatalogSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -48,9 +48,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9068 Seconds
+Test execution time: 1,8667 Seconds
 ----------------------------------------------------TestPutCatalogFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -58,9 +58,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9615 Seconds
+Test execution time: 1,9168 Seconds
 ----------------------------------------------------TestPostCatalogSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -68,9 +68,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9232 Seconds
+Test execution time: 1,8791 Seconds
 ----------------------------------------------------TestPostCatalogFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -78,9 +78,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8890 Seconds
+Test execution time: 1,9466 Seconds
 ----------------------------------------------------TestDeleteCatalogSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -88,9 +88,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8796 Seconds
+Test execution time: 1,8773 Seconds
 ----------------------------------------------------TestDeleteCatalogFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -98,9 +98,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8978 Seconds
+Test execution time: 1,9364 Seconds
 ----------------------------------------------------TestAddProductSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -108,9 +108,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8914 Seconds
+Test execution time: 1,8686 Seconds
 ----------------------------------------------------TestAddProductFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -118,9 +118,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9563 Seconds
+Test execution time: 2,0166 Seconds
 ----------------------------------------------------TestDeleteProductSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -128,9 +128,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9467 Seconds
+Test execution time: 1,8994 Seconds
 ----------------------------------------------------TestDeleteProductFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -138,9 +138,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,9777 Seconds
+Test execution time: 1,8842 Seconds
 ----------------------------------------------------TestGetCollectionsSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -148,9 +148,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8398 Seconds
+Test execution time: 1,8060 Seconds
 ----------------------------------------------------TestGetCollectionsFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -158,9 +158,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8358 Seconds
+Test execution time: 1,8498 Seconds
 ----------------------------------------------------TestGetCollectionSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -168,9 +168,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8372 Seconds
+Test execution time: 1,8207 Seconds
 ----------------------------------------------------TestGetCollectionFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -178,9 +178,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8431 Seconds
+Test execution time: 1,8457 Seconds
 ----------------------------------------------------TestPutCollectionSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -188,9 +188,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8623 Seconds
+Test execution time: 1,9586 Seconds
 ----------------------------------------------------TestPutCollectionFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -198,9 +198,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8603 Seconds
+Test execution time: 1,8405 Seconds
 ----------------------------------------------------TestPostCollectionSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -208,9 +208,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8998 Seconds
+Test execution time: 1,9374 Seconds
 ----------------------------------------------------TestPostCollectionFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -218,9 +218,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8466 Seconds
+Test execution time: 1,8292 Seconds
 ----------------------------------------------------TestDeleteCollectionSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -228,9 +228,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8708 Seconds
+Test execution time: 1,9331 Seconds
 ----------------------------------------------------TestDeleteCollectionFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -238,9 +238,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8699 Seconds
+Test execution time: 1,8249 Seconds
 ----------------------------------------------------TestAddProductSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -248,9 +248,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8959 Seconds
+Test execution time: 1,9226 Seconds
 ----------------------------------------------------TestAddProductFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -258,9 +258,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8794 Seconds
+Test execution time: 1,9159 Seconds
 ----------------------------------------------------TestDeleteProductSuccess----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -268,9 +268,9 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8809 Seconds
+Test execution time: 1,9031 Seconds
 ----------------------------------------------------TestDeleteProductFail----------------------------------------------------
-Test run for C:\Users\Hugo\Desktop\trabalhos\3§Ano\1§SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
@@ -278,9 +278,129 @@ Starting test execution, please wait...
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1,8439 Seconds
+Test execution time: 1,8321 Seconds
+----------------------------------------------------TestGetPricesSuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8268 Seconds
+----------------------------------------------------TestGetPricesFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8491 Seconds
+----------------------------------------------------TestGetPriceSuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8102 Seconds
+----------------------------------------------------TestGetPriceFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,9323 Seconds
+----------------------------------------------------TestPutPriceSuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8286 Seconds
+----------------------------------------------------TestPutPriceFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,9196 Seconds
+----------------------------------------------------TestPostPriceSuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8679 Seconds
+----------------------------------------------------TestPostPriceFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,9150 Seconds
+----------------------------------------------------TestDeletePriceSuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8290 Seconds
+----------------------------------------------------TestDeletePriceFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,9062 Seconds
+----------------------------------------------------TestGetPriceByEntitySuccess----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8039 Seconds
+----------------------------------------------------TestGetPriceByEntityFail----------------------------------------------------
+Test run for C:\Users\Hugo\Desktop\trabalhos\3ï¿½Ano\1ï¿½SEMESTRE\LAPR5\LAPR5_GC\bin\Debug\netcoreapp2.1\SiC.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1,8722 Seconds
 ----------------------------------------------------Total Compilation Time----------------------------------------------------
-Start    : 19:42:34,06
-Finish   : 19:43:55,60
+Start    : 23:57:15,90
+Finish   : 23:59:10,45
          --------------
-Duration : 00:01:21,54
+Duration : 00:01:54,55

@@ -62,6 +62,31 @@ dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.Test
 echo ----------------------------------------------------TestDeleteProductFail---------------------------------------------------->>test_results.txt
 dotnet test --no-build --filter LAPR5_GC.UnitTests.CollectionControllerTest.TestDeleteProductFail >> test_results.txt 2>&1
 
+echo ----------------------------------------------------TestGetPricesSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPricesSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetPricesFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPricesFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetPriceSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPriceSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetPriceFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPriceFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutPriceSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestPutPriceSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutPriceFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestPutPriceFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostPriceSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestPostPriceSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostPriceFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestPostPriceFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeletePriceSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestDeletePriceSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeletePriceFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestDeletePriceFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetPriceByEntitySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPriceByEntitySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetPriceByEntityFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPriceByEntityFail >> test_results.txt 2>&1
+
 echo ----------------------------------------------------Total Compilation Time---------------------------------------------------->>test_results.txt
 
 set ENDTIME=%TIME%
