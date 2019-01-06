@@ -1,0 +1,2752 @@
+{
+	"info": {
+		"_postman_id": "e146c139-ecc7-4f4b-bf94-8e26aa72e13b",
+		"name": "LAPR5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "Get_Catalog_1[Success",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "617b25ba-b1da-44cb-a25d-fd1ee12e5de4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogName\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogDescription\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogDescription\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find products\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"products\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog"
+							]
+						},
+						"description": "Get all catalogs"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Catalog_2[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "056f3989-0546-4c2c-b9bf-aba792b3c052",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogName\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find catalogDescription\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"catalogDescription\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find products\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"products\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body of a Catalog is correct\", function () {\r",
+									"    pm.response.to.have.body({\r",
+									"    \"catalogId\": 1,\r",
+									"    \"catalogName\": \"Catalogo G8579\",\r",
+									"    \"catalogDescription\": \"Catalogo desenvolvido para teste\",\r",
+									"    \"products\": [\r",
+									"        {\r",
+									"            \"productId\": 1,\r",
+									"            \"name\": \"G8579\",\r",
+									"            \"description\": \"Produto desenvolvido para teste\",\r",
+									"            \"dimensions\": [\r",
+									"                {\r",
+									"                    \"dimensionId\": 1,\r",
+									"                    \"width\": {\r",
+									"                        \"id\": 6,\r",
+									"                        \"value\": 30,\r",
+									"                        \"valueMax\": 50,\r",
+									"                        \"isDiscrete\": false\r",
+									"                    },\r",
+									"                    \"height\": {\r",
+									"                        \"id\": 5,\r",
+									"                        \"value\": 80,\r",
+									"                        \"valueMax\": 0,\r",
+									"                        \"isDiscrete\": true\r",
+									"                    },\r",
+									"                    \"depth\": {\r",
+									"                        \"id\": 4,\r",
+									"                        \"value\": 20,\r",
+									"                        \"valueMax\": 40,\r",
+									"                        \"isDiscrete\": false\r",
+									"                    }\r",
+									"                }\r",
+									"            ],\r",
+									"            \"materials\": [\r",
+									"                {\r",
+									"                    \"materialId\": 1,\r",
+									"                    \"name\": \"Madeira\",\r",
+									"                    \"description\": null,\r",
+									"                    \"finishes\": [\r",
+									"                        {\r",
+									"                            \"finishingId\": 1,\r",
+									"                            \"name\": \"Polimento\",\r",
+									"                            \"description\": null,\r",
+									"                            \"prices\": null\r",
+									"                        }\r",
+									"                    ],\r",
+									"                    \"prices\": null\r",
+									"                }\r",
+									"            ],\r",
+									"            \"category\": null\r",
+									"        }\r",
+									"    ],\r",
+									"    \"date\": null\r",
+									"})});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"1"
+							]
+						},
+						"description": "Gettin a catalog by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Catalog_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5b4c1a6f-e983-4b9e-a75c-99c54800e921",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/543654",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"543654"
+							]
+						},
+						"description": "Getting non-existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Catalog_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9b5e7781-319f-4bca-b1e4-e4a69222fd8d",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"catalogId\": 345437,\n    \"catalogName\": \"Catalogo G8579\",\n    \"catalogDescription\": \"Catalogo desenvolvido para teste\",\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"date\": null\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"1"
+							]
+						},
+						"description": "Put to an existing catalog sending a body with errors"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Catalog_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4e7e843-5bba-40f1-b9a0-ef8098a3d3b5",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"catalogId\": 345437,\n    \"catalogName\": \"Catalogo G8579\",\n    \"catalogDescription\": \"Catalogo desenvolvido para teste\",\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"date\": null\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/23462",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"23462"
+							]
+						},
+						"description": "Put to a non-existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Catalog_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a1a7c966-d785-4854-881c-287d9b519f23",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"catalogName\": \"Catalogo G8579\",\n    \"catalogDescription\": \"Catalogo desenvolvido para teste\",\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"date\": null\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog"
+							]
+						},
+						"description": "Posting a catalog with an existing name"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Catalog_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "44d1f4c6-e0d3-4b6f-9ff5-517a024b77d3",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/23462",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"23462"
+							]
+						},
+						"description": "Deleting a non-existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCatalog_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f638568-931f-46d2-83c2-fee23c3e2131",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/23462/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"23462",
+								"product",
+								"1"
+							]
+						},
+						"description": "Adding an existing product to a non-existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCatalog_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ff5eeda9-88e1-45cc-97e3-55c6b1431b87",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1/product/423654",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"1",
+								"product",
+								"423654"
+							]
+						},
+						"description": "Put a non-existing product to an existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCatalog_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "deba166c-80c5-4531-b3fa-6c06672c89ec",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"1",
+								"product",
+								"1"
+							]
+						},
+						"description": "Put a a product that already exists in a catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ProductFromCatalog_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "134749e4-a761-4ac3-896c-ed186a7feb98",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/54392/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"54392",
+								"product",
+								"1"
+							]
+						},
+						"description": "Deleting a product from a non-existing catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ProductFromCatalog_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "17594a0d-756e-487d-b1da-9cc49e33f5ef",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/catalog/1/product/346545",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"1",
+								"product",
+								"346545"
+							]
+						},
+						"description": "Deleting a non-existing product from an existing catalog"
+					},
+					"response": []
+				}
+			],
+			"description": "All tests regarding catalogs"
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "Get_City_1[OK]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b0c96617-dd7b-4d0d-b84e-98a286cd5cce",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find city\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find cityId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"cityId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find latitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find longitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitude\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city"
+							]
+						},
+						"description": "Getting all cities"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_City_2[OK]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5335b3d4-c502-43ea-9fc6-e3a98ea66c49",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find city\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find cityId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"cityId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find latitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find longitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body of a Factoryt is correct\", function () {\r",
+									"    pm.response.to.have.body({\r",
+									"    \"cityId\": 1,\r",
+									"    \"name\": \"Aveiro\",\r",
+									"    \"latitude\": 40.64119,\r",
+									"    \"longitude\": -8.65362\r",
+									"});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city",
+								"1"
+							]
+						},
+						"description": "Getting city by an existing id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_City_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a1c946d1-2782-4146-a9ed-7fc42d967d01",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city/1264234",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city",
+								"1264234"
+							]
+						},
+						"description": "Getting a non existing city"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_City_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ac26656f-3530-41b1-aad4-e32fb411c9ac",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": 287632,\n    \"name\": \"City\",\n    \"latitude\": 10.01,\n    \"longitude\": 53.01\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city",
+								"1"
+							]
+						},
+						"description": "Put request to an existing city with errors in the body"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_City_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8aa60eac-084f-4590-aa89-276b6aa76a27",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": 1,\n    \"name\": \"City\",\n    \"latitude\": 10.01,\n    \"longitude\": 53.01\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city/4326345",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city",
+								"4326345"
+							]
+						},
+						"description": "Put to a non existing cit"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_City_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c3cb065b-3bc6-43b2-9b36-7496b6aaf45d",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"name\": \"Beja\",\n        \"latitude\": 38.015621,\n        \"longitude\": -7.86523\n    }"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city"
+							]
+						},
+						"description": "Post a city with an existing name"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_City_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c7277555-9ca2-40e3-83d7-2c603f3e8d16",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"name\": \"TesteNome\",\n        \"latitude\": 38.015621,\n        \"longitude\": -7.86523\n    }"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city"
+							]
+						},
+						"description": "Post a city with existing coordinates"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_City_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5fae353d-f865-4f14-bfe7-a3d1ecb18759",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/city/87034",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"city",
+								"87034"
+							]
+						},
+						"description": "Deleting a non existing city"
+					},
+					"response": []
+				}
+			],
+			"description": "Request regarding cities"
+		},
+		{
+			"name": "Collection",
+			"item": [
+				{
+					"name": "Get_Collection_1[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4cb94fa8-63aa-46e1-88f2-8036931e023b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find collectionId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"collectionId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find products\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"products\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find collectionName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"collectionName\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find aestheticParameter\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"aestheticParameter\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection"
+							]
+						},
+						"description": "Get all collections"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Collection_2[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "15e1c97d-0ea4-447f-ab03-12bd4b7e4686",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find collectionId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"collectionId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find products\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"products\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find collectionName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"collectionName\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find aestheticParameter\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"aestheticParameter\");\r",
+									"});\r",
+									"pm.test(\"Body of a Factoryt is correct\", function () {\r",
+									"    pm.response.to.have.body({\r",
+									"    \"collectionId\": 1,\r",
+									"    \"products\": [\r",
+									"        {\r",
+									"            \"productId\": 1,\r",
+									"            \"name\": \"G8579\",\r",
+									"            \"description\": \"Produto desenvolvido para teste\",\r",
+									"            \"dimensions\": [\r",
+									"                {\r",
+									"                    \"dimensionId\": 1,\r",
+									"                    \"width\": {\r",
+									"                        \"id\": 6,\r",
+									"                        \"value\": 30,\r",
+									"                        \"valueMax\": 50,\r",
+									"                        \"isDiscrete\": false\r",
+									"                    },\r",
+									"                    \"height\": {\r",
+									"                        \"id\": 5,\r",
+									"                        \"value\": 80,\r",
+									"                        \"valueMax\": 0,\r",
+									"                        \"isDiscrete\": true\r",
+									"                    },\r",
+									"                    \"depth\": {\r",
+									"                        \"id\": 4,\r",
+									"                        \"value\": 20,\r",
+									"                        \"valueMax\": 40,\r",
+									"                        \"isDiscrete\": false\r",
+									"                    }\r",
+									"                }\r",
+									"            ],\r",
+									"            \"materials\": [\r",
+									"                {\r",
+									"                    \"materialId\": 1,\r",
+									"                    \"name\": \"Madeira\",\r",
+									"                    \"description\": null,\r",
+									"                    \"finishes\": [\r",
+									"                        {\r",
+									"                            \"finishingId\": 1,\r",
+									"                            \"name\": \"Polimento\",\r",
+									"                            \"description\": null,\r",
+									"                            \"prices\": null\r",
+									"                        }\r",
+									"                    ],\r",
+									"                    \"prices\": null\r",
+									"                }\r",
+									"            ],\r",
+									"            \"category\": null\r",
+									"        }\r",
+									"    ],\r",
+									"    \"collectionName\": \"Madeira e mais Madeira\",\r",
+									"    \"aestheticParameter\": \"Madeira\"\r",
+									"});\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"1"
+							]
+						},
+						"description": "Get a collection by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Collection_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7621fde3-ecb8-4d1a-8948-47825575e211",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/4867943",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"4867943"
+							]
+						},
+						"description": "Get a non-existing collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Collection_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "369a022f-0309-4ae0-957c-0dddddd178f8",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collectionId\": 43672,\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"collectionName\": \"Madeira e mais Madeira\",\n    \"aestheticParameter\": \"Madeira\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"1"
+							]
+						},
+						"description": "Put to an existing collection with an mismatching id in the body of the message"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Collection_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "322f86ae-452b-4129-b9b2-72aef45b54a3",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collectionId\": 1,\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"collectionName\": \"Madeira e mais Madeira\",\n    \"aestheticParameter\": \"Madeira\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/543422",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"543422"
+							]
+						},
+						"description": "Put to a non-existing collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Collection_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bfefe4e2-0251-46db-9be8-90e9ffde90ef",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [\n        {\n            \"productId\": 1,\n            \"name\": \"G8579\",\n            \"description\": \"Produto desenvolvido para teste\",\n            \"dimensions\": [\n                {\n                    \"dimensionId\": 1,\n                    \"width\": {\n                        \"id\": 6,\n                        \"value\": 30,\n                        \"valueMax\": 50,\n                        \"isDiscrete\": false\n                    },\n                    \"height\": {\n                        \"id\": 5,\n                        \"value\": 80,\n                        \"valueMax\": 0,\n                        \"isDiscrete\": true\n                    },\n                    \"depth\": {\n                        \"id\": 4,\n                        \"value\": 20,\n                        \"valueMax\": 40,\n                        \"isDiscrete\": false\n                    }\n                }\n            ],\n            \"materials\": [\n                {\n                    \"materialId\": 1,\n                    \"name\": \"Madeira\",\n                    \"description\": null,\n                    \"finishes\": [\n                        {\n                            \"finishingId\": 1,\n                            \"name\": \"Polimento\",\n                            \"description\": null,\n                            \"prices\": null\n                        }\n                    ],\n                    \"prices\": null\n                }\n            ],\n            \"category\": null\n        }\n    ],\n    \"collectionName\": \"Madeira e mais Madeira\",\n    \"aestheticParameter\": \"Madeira\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection"
+							]
+						},
+						"description": "Posting a collection with an existing name"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Collection_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f47a5b16-f915-48ba-8187-6cef53dac7ae",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/543422",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"543422"
+							]
+						},
+						"description": "Deleting a non_existing Collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCollection_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "feadfabb-4d64-4190-aee1-3021424b2e2d",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/1/product/216327",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"1",
+								"product",
+								"216327"
+							]
+						},
+						"description": "Adding non-existing product to existing collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCollection_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eebe8ab2-bc52-4e00-bbe2-f405f8421c76",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/434352/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"434352",
+								"product",
+								"1"
+							]
+						},
+						"description": "Adding an existing product to a non-existing collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_ProductToCollection_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3b2171da-63ae-49dc-8be0-6bc59124633c",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/1/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"1",
+								"product",
+								"1"
+							]
+						},
+						"description": "Adding a product that already exists in a collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ProductFromCollection_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f1f0d96-0d68-4e42-a032-0634e12d8ba0",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/1/product/65433",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"1",
+								"product",
+								"65433"
+							]
+						},
+						"description": "Deleting a non-existing product from an existing collection"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ProductFromCollection_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf1878dc-f26a-44b4-a2b5-4e591851659a",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/collection/654354/product/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"collection",
+								"654354",
+								"product",
+								"1"
+							]
+						},
+						"description": "Deleting a product from a non-existing collection"
+					},
+					"response": []
+				}
+			],
+			"description": "All tests regarding collections"
+		},
+		{
+			"name": "Factory",
+			"item": [
+				{
+					"name": "Get_Factory_1[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "117ce937-f6a1-4daa-98c1-1aad76ec753c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find factoryId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"factoryId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find description\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"description\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find city\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find cityId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"cityId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find latitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find longitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitude\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory"
+							]
+						},
+						"description": "api/Factory, getting all factories"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Factory_2[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "94ba7e39-6f4d-4976-8f9f-e39a20b5d59d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find factoryId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"factoryId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find description\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"description\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find city\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find cityId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"cityId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find latitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find longitude\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitude\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body of a Factoryt is correct\", function () {\r",
+									"    pm.response.to.have.body({\r",
+									"    \"factoryId\": 1,\r",
+									"    \"description\": \"Fabrica situada no Porto\",\r",
+									"    \"city\": {\r",
+									"        \"cityId\": 6,\r",
+									"        \"name\": \"Porto\",\r",
+									"        \"latitude\": 41.157944,\r",
+									"        \"longitude\": -8.629105\r",
+									"    }\r",
+									"});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory",
+								"1"
+							]
+						},
+						"description": "api/factory/id, getting factory by id (id = )"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Factory_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2b91a0e5-3d60-4a66-923a-97dd523094f4",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory/436892734",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory",
+								"436892734"
+							]
+						},
+						"description": "api/factory/id, getting a non existing factory by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Factory_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c1ad30c9-764a-473c-b8e0-f5e78b6b7c6c",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"factoryId\": 47,\n    \"description\": \"Faro\",\n    \"city\": {\n        \"cityId\": 9,\n        \"name\": \"Faro\",\n        \"latitude\": 37.015362,\n        \"longitude\": -7.93511\n    }\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory/436892734",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory",
+								"436892734"
+							]
+						},
+						"description": "api/factory/id, put request to a non existing factory"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Factory_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5f3f0caf-9a5e-46f6-ab07-03457275d935",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"factoryId\": 324689,\n    \"description\": \"Faro\",\n    \"city\": {\n        \"cityId\": 9,\n        \"name\": \"Faro\",\n        \"latitude\": 37.015362,\n        \"longitude\": -7.93511\n    }\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory/47",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory",
+								"47"
+							]
+						},
+						"description": "api/factory/id, put request to an existing factory with errors in the body"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Factory_1[Error](Completar-descrep",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Faro\",\n    \"city\": {\n        \"cityId\": 9,\n        \"name\": \"Faro\",\n        \"latitude\": 37.015362,\n        \"longitude\": -7.93511\n    }\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory"
+							]
+						},
+						"description": "post factory with an existing description, it gives an erro"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Factory_2[Error] (Completar-fabrepet)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Faro\",\n    \"city\": {\n        \"cityId\": 9,\n        \"name\": \"Faro\",\n        \"latitude\": 37.015362,\n        \"longitude\": -7.93511\n    }\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory"
+							]
+						},
+						"description": "post a factory in an city that already has a factory"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Factory_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5cf416d-da47-4ce8-9cdb-a60d4bccd218",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/factory/98723423",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"factory",
+								"98723423"
+							]
+						},
+						"description": "Deleting a non existing factory"
+					},
+					"response": []
+				}
+			],
+			"description": "All tests related to factories"
+		},
+		{
+			"name": "Price",
+			"item": [
+				{
+					"name": "Get_Price_1[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f33ded7-823f-4eda-8cef-dd629526ffea",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find priceId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"priceId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find price\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"price\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find date\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"date\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price"
+							]
+						},
+						"description": "Get all the prices"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Price_2[Success]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "43b97749-ef8b-46e1-ba49-3d369a76145a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find priceId\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"priceId\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find price\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"price\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Find date\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body of a Price is correct\", function () {\r",
+									"    pm.response.to.have.body({\r",
+									"    \"priceId\": 1,\r",
+									"    \"designation\": \"Madeira\",\r",
+									"    \"price\": 5,\r",
+									"    \"date\": \"2019-01-06\"\r",
+									"});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price",
+								"1"
+							]
+						},
+						"description": "Get an existing price by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Price_3[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f297241c-479f-43f6-92d1-fe0198c42223",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Not Found\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price/543224",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price",
+								"543224"
+							]
+						},
+						"description": "Get a non-existing price"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Price_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "25df31e3-28e8-4c50-9b9e-bf13b308a2c7",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"priceId\": 32543,\n    \"designation\": \"Madeira\",\n    \"price\": 5,\n    \"date\": \"2019-01-06\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price/1",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price",
+								"1"
+							]
+						},
+						"description": "Put to an existing price but with a body with a non-matching id"
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Price_2[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2fa1934f-6639-452d-802d-92b952eb50a6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"priceId\": 1,\n    \"designation\": \"Madeira\",\n    \"price\": 5,\n    \"date\": \"2019-01-06\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price/324543",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price",
+								"324543"
+							]
+						},
+						"description": "Put to a non-existing price"
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Price_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4f6922c-7816-47d7-986f-6be4694cf25e",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"designation\": \"Teste\",\n    \"price\": -1,\n    \"date\": \"2019-01-06\"\n}"
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price"
+							]
+						},
+						"description": "Post of a price with a value < 0"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Price_1[Error]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8ff0895-c338-4964-9206-96131f59578e",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name Bad Request\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://lapr5-gc.azurewebsites.net/api/price/4231",
+							"protocol": "https",
+							"host": [
+								"lapr5-gc",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"price",
+								"4231"
+							]
+						},
+						"description": "Deleting a non-existing price"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests regarding prices"
+		}
+	]
+}
