@@ -81,6 +81,10 @@ namespace SiC.Controllers
 
             var city = await cityRepository.Edit(id, cityDTO);
 
+            if(city == null){
+                return BadRequest();
+            }
+
             CityDTO dto = new CityDTO();
             dto.CityId = city.CityId;
             dto.Name = city.Name;

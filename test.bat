@@ -87,6 +87,27 @@ dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPr
 echo ----------------------------------------------------TestGetPriceByEntityFail---------------------------------------------------->>test_results.txt
 dotnet test --no-build --filter LAPR5_GC.UnitTests.PriceControllerTest.TestGetPriceByEntityFail >> test_results.txt 2>&1
 
+echo ----------------------------------------------------TestGetCitiesSuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestGetCitiesSuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCitiesFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestGetCitiesFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCitySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestGetCitySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestGetCityFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestGetCityFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutCitySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestPutCitySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPutCityFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestPutCityFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostCitySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestPostCitySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestPostCityFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestPostCityFail >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteCitySuccess---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestDeleteCitySuccess >> test_results.txt 2>&1
+echo ----------------------------------------------------TestDeleteCityFail---------------------------------------------------->>test_results.txt
+dotnet test --no-build --filter LAPR5_GC.UnitTests.CityControllerTest.TestDeleteCityFail >> test_results.txt 2>&1
+
 echo ----------------------------------------------------Total Compilation Time---------------------------------------------------->>test_results.txt
 
 set ENDTIME=%TIME%

@@ -45,9 +45,9 @@ namespace SiC.Repository
 
             if (city == null) return null;
 
-            if (context.City.Any(c => c.Name == dto.Name)) return null;
+            if (context.City.Any(c => c.Name == dto.Name && c.CityId != dto.CityId)) return null;
 
-            if (context.City.Any(c => c.Latitude == dto.Latitude && c.Longitude == dto.Longitude)) return null;
+            if (context.City.Any(c => c.Latitude == dto.Latitude && c.Longitude == dto.Longitude && c.CityId != dto.CityId)) return null;
 
             city.Name = dto.Name;
             city.Latitude = dto.Latitude;
