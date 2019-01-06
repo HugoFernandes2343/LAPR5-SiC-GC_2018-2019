@@ -23,7 +23,9 @@
 
 
 load_cities_url("https://localhost:5001/api/city").
+%load_cities_url("https://lapr5-gc.azurewebsites.net/api/City").
 load_factories_url("https://localhost:5001/api/factory").
+%load_factories_url("https://lapr5-gc.azurewebsites.net/api/Factory").
 
 
 
@@ -130,7 +132,9 @@ list_cities(_Request):- cors_enable,
 list_factories(_Request):- cors_enable,
     format('Content-type: application/json~n~n'),
     findall(X, factory(X,_,_), L),
-    json_write(current_output,L).
+    (length(L) \== 0 ->
+    (   json_write(current_output,L));
+    (   json_write(current_output, 'No Factories in KB'))).
 
 
 
@@ -168,7 +172,7 @@ shorter_path(Request) :-cors_enable,
 
 shorter_path1(City):-
     format('Content-type: application/json~n~n'),
-    (   \+city(City,_,_,_), format('City does not exist!~n'), !, true);
+    (   \+city(City,_,_,_), json_write(current_output,'City does not exist!'), !, true);
     menor_caminho_opt(City, Lista, _),
     %menor_caminho(City, Lista, Dist),
     to_id(Lista, IDs),
